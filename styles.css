@@ -19,3 +19,8 @@ h1, h2 {
 .w-1\/8 {
   width: 12.5%;     /* 100% / 8 */
 }
+
+.band-img{
+    height: 225px;
+    width: auto
+}
