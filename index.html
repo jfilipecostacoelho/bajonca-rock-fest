@@ -12,35 +12,85 @@
 </head>
 
 <body class="min-h-screen flex flex-col m-0 p-0 ">
-  <div class="bg-black flex border-b border-gray-700 w-full font-bold fixed top-0">
-    <nav class="p-2 mx-auto "> 
+  <div class="bg-black border-b border-gray-700 w-full font-bold fixed top-0 z-50">
+    <nav class="p-2 mx-auto">
       <div class="container mx-auto flex justify-between items-center">
-
-        <ul class="flex space-x-6"> 
-            <li><a href="#" class="hover:text-teal-600">HOME</a></li>
-            <li><a href="#cartaz" class="hover:text-teal-600">CARTAZ</a></li>
-            <li><a href="#horarios" class="hover:text-teal-600">HORÁRIOS</a></li>
-            <li><a href="#cartaz" class="hover:text-teal-600">ART MARKET</a></li>
-            <li><a href="#" class="hover:text-teal-600">COMO CHEGAR</a></li>
-            <li><a href="#" class="hover:text-teal-600">INFO</a></li>
-            <li><a href="#" class="hover:text-teal-600">PARCEIROS</a></li>
-            <li><a href="#" class="hover:text-teal-600">ABOUT US</a></li>
+  
+        <!-- Placeholder à esquerda (vazio para centralizar) -->
+        <div class="w-6 md:w-1/3"></div>
+  
+        <!-- Menu Desktop Centrado -->
+        <ul class="hidden md:flex space-x-6 text-white left-1/2 -translate-x-1/2">
+          <li><a href="#" class="hover:text-teal-600">HOME</a></li>
+          <li><a href="#cartaz" class="hover:text-teal-600">CARTAZ</a></li>
+          <li><a href="#horarios" class="hover:text-teal-600">HORÁRIOS</a></li>
+          <li><a href="#cartaz" class="hover:text-teal-600">ART MARKET</a></li>
+          <li><a href="#" class="hover:text-teal-600">COMO CHEGAR</a></li>
+          <li><a href="#" class="hover:text-teal-600">INFO</a></li>
+          <li><a href="#" class="hover:text-teal-600">PARCEIROS</a></li>
+          <li><a href="#" class="hover:text-teal-600">ABOUT US</a></li>
         </ul>
-
+  
+        <!-- Botão Mobile à direita -->
+        <button id="menu-btn" class="text-white md:hidden w-6">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+               viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
       </div>
+  
+      <!-- Menu Mobile -->
+      <ul id="mobile-menu" class="md:hidden hidden flex-col space-y-2 mt-4 px-4 text-white text-right">
+        <li><a href="#" class="hover:text-teal-600 block">HOME</a></li>
+        <li><a href="#cartaz" class="hover:text-teal-600 block">CARTAZ</a></li>
+        <li><a href="#horarios" class="hover:text-teal-600 block">HORÁRIOS</a></li>
+        <li><a href="#cartaz" class="hover:text-teal-600 block">ART MARKET</a></li>
+        <li><a href="#" class="hover:text-teal-600 block">COMO CHEGAR</a></li>
+        <li><a href="#" class="hover:text-teal-600 block">INFO</a></li>
+        <li><a href="#" class="hover:text-teal-600 block">PARCEIROS</a></li>
+        <li><a href="#" class="hover:text-teal-600 block">ABOUT US</a></li>
+      </ul>
     </nav>
   </div>
-
+  
+  <script>
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('mobile-menu');
+  
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  
+    // Fecha o menu ao clicar num item
+    menu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        menu.classList.add('hidden');
+      });
+    });
+  </script>
+  
   <!-- HOME -->
-  <div class="flex flex-col items-center h-screen justify-center w-full">
+  <div class="flex flex-col items-center h-screen justify-center w-full text-center px-4">
 
-      <img src="img/logo2024.png" alt="Bajonca Rock Fest Logo" class="w-1/4 h-auto object-contain">
-    
-      <h1 class="ml-2 text-4xl md:text-6xl text-teal-600 mt-2">BAJONCA ROCK FEST</h1>
+    <img src="img/logo2024.png" alt="Bajonca Rock Fest Logo"
+         class="w-2/3 sm:w-1/2 md:w-1/3 lg:w-1/4 h-auto object-contain mb-4">
+  
+    <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-teal-600 mb-2">
+      BAJONCA ROCK FEST
+    </h1>
+  
+    <p class="hidden text-xl md:block md:text-xl text-gray-300 m-2">
+      Festival de Rock & Metal | 11 e 12 de Julho 2025 | Valadares, S. Pedro do Sul, Viseu
+    </p>
 
-    
-    <p class="text-xl text-lg md:text-xl text-gray-300 m-2">Festival de Rock & Metal | 11 e 12 de Julho 2025 | Valadares, S. Pedro do Sul, Viseu</p>
+    <p class="text-base md:hidden text-gray-300">
+      Festival de Rock & Metal <br> 11 e 12 de Julho 2025 <br> Valadares, S. Pedro do Sul, Viseu
+    </p>
+  
   </div>
+  
 
   <main class="flex-1 pl-8 px-8 max-w-4xl mx-auto text-center">
      
@@ -594,7 +644,6 @@
 
     </section>
 
-    
   </main>
 
   <footer class="text-center text-gray-500 text-sm py-6 border-t border-gray-700">
