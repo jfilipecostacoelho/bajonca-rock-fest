@@ -13,12 +13,3 @@ menu.querySelectorAll('a').forEach(link => {
     });
 });
 
-// NAVIGATION
-document.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', async (e) => {
-        e.preventDefault();
-        const res = await fetch(link.getAttribute('href'));
-        const html = await res.text();
-        document.getElementById('content').innerHTML = html;
-    });
-});
