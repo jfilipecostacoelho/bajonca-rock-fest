@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bajonca Rock Fest</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="script.js" defer></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" type="text/css" href="styles.css">
@@ -15,33 +14,25 @@
 <body class="min-h-screen flex flex-col m-0 p-0 ">
   <div class="bg-black border-b border-gray-700 w-full font-bold fixed top-0 z-50">
     <nav class="p-2 mx-auto z-50">
-      
-      <!-- MENU DESKTOP -->
-      <div class="hidden md:flex container mx-auto flex justify-center">
-        <ul class="flex space-x-6 text-white">
-          <li><a href="#content" class="nav-link hover:text-teal-600">HOME</a></li>
-          <li><a href="#cartaz" class="nav-link hover:text-teal-600">CARTAZ</a></li>
+      <div class="container mx-auto flex justify-between items-center">
+  
+        <!-- Placeholder à esquerda (vazio para centralizar) -->
+        <div class="w-6 md:w-1/3"></div>
+  
+        <!-- Menu Desktop Centrado -->
+        <ul class="hidden md:flex space-x-6 text-white left-1/2 -translate-x-1/2">
+          <li><a href="#" class="hover:text-teal-600">HOME</a></li>
+          <li><a href="#cartaz" class="hover:text-teal-600">CARTAZ</a></li>
           <li><a href="#horarios" class="hover:text-teal-600">HORÁRIOS</a></li>
-<<<<<<< Updated upstream
-          <li><a href="#artmarket" class="hover:text-teal-600">ART MARKET</a></li>
-          <li><a href="#local" class="hover:text-teal-600">LOCALIZAÇÃO</a></li>
-          <li><a href="#zona" class="hover:text-teal-600">ZONA</a></li>
-          <li><a href="#info" class="hover:text-teal-600">INFO</a></li>
-          <li><a href="#parceiros" class="hover:text-teal-600">PARCEIROS</a></li>
-          <li><a href="#historia" class="hover:text-teal-600 block">HISTÓRIA</a></li>
-          <li><a href="#acerca" class="hover:text-teal-600">ABOUT US</a></li>
-=======
           <li><a href="#cartaz" class="hover:text-teal-600">ART MARKET</a></li>
           <li><a href="#artmarket" class="hover:text-teal-600">COMO CHEGAR</a></li>
           <li><a href="#" class="hover:text-teal-600">INFO</a></li>
           <li><a href="#" class="hover:text-teal-600">PARCEIROS</a></li>
           <li><a href="#" class="hover:text-teal-600">ABOUT US</a></li>
->>>>>>> Stashed changes
         </ul>
-      </div>
   
-      <div class="md:hidden container mx-auto flex justify-end">
-        <button id="menu-btn" class="text-white w-6">
+        <!-- Botão Mobile à direita -->
+        <button id="menu-btn" class="text-white md:hidden w-6">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
                viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round"
@@ -50,24 +41,36 @@
         </button>
       </div>
   
-      <!-- MENU MOBILE -->
-        <ul id="mobile-menu" class="md:hidden hidden flex-col space-y-2 mt-4 px-4 text-white text-right">
-          <li><a href="#content" class="hover:text-teal-600 block">HOME</a></li>
-          <li><a href="#cartaz" class="hover:text-teal-600 block">CARTAZ</a></li>
-          <li><a href="#horarios" class="hover:text-teal-600 block">HORÁRIOS</a></li>
-          <li><a href="#artmarket" class="hover:text-teal-600 block">ART MARKET</a></li>
-          <li><a href="#local" class="hover:text-teal-600 block">LOCALIZAÇÃO</a></li>
-          <li><a href="#zona" class="hover:text-teal-600">ZONA</a></li>
-          <li><a href="#info" class="hover:text-teal-600 block">INFO</a></li>
-          <li><a href="#parceiros" class="hover:text-teal-600 block">PARCEIROS</a></li>
-          <li><a href="#historia" class="hover:text-teal-600 block">HISTÓRIA</a></li>
-          <li><a href="#acerca" class="hover:text-teal-600 block">ABOUT US</a></li>
-        </ul>
-
+      <!-- Menu Mobile -->
+      <ul id="mobile-menu" class="md:hidden hidden flex-col space-y-2 mt-4 px-4 text-white text-right">
+        <li><a href="#" class="hover:text-teal-600 block">HOME</a></li>
+        <li><a href="#cartaz" class="hover:text-teal-600 block">CARTAZ</a></li>
+        <li><a href="#horarios" class="hover:text-teal-600 block">HORÁRIOS</a></li>
+        <li><a href="#cartaz" class="hover:text-teal-600 block">ART MARKET</a></li>
+        <li><a href="#artmarket" class="hover:text-teal-600 block">COMO CHEGAR</a></li>
+        <li><a href="#" class="hover:text-teal-600 block">INFO</a></li>
+        <li><a href="#" class="hover:text-teal-600 block">PARCEIROS</a></li>
+        <li><a href="#" class="hover:text-teal-600 block">ABOUT US</a></li>
+      </ul>
     </nav>
   </div>
-    
-  <div id="content">
+  
+  <script>
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('mobile-menu');
+  
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  
+    // Fecha o menu ao clicar num item
+    menu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        menu.classList.add('hidden');
+      });
+    });
+  </script>
+  
   <!-- HOME -->
   <div class="flex flex-col items-center h-screen justify-center w-full text-center px-4">
 
@@ -98,7 +101,7 @@
         <h1 class="text-4xl md:text-4xl text-teal-600 mb-4">CARTAZ</h1>
         
         <a href="img/cartaz2025.jpg" target="_blank">
-          <img src="img/cartaz2025.jpg" alt="Bajonca Rock Fest" class="mx-auto sm:w-1/4 md:w-1/2 h-auto mt-4 rounded-lg shadow-lg">
+          <img src="img/cartaz2025.jpg" alt="Bajonca Rock Fest" class="mx-auto w-1/2 h-auto mt-4 rounded-lg shadow-lg">
         </a>
       </div>
 
@@ -575,636 +578,72 @@
 
     </section>
 
-    <!-- HORÁRIOS--------------------------------------------------------------------------------------------------------------------------->
     <section id="horarios" class="pt-16 mb-12">
       
       <div class="mb-4">
         <h1 class="text-4xl md:text-4xl text-teal-600 mb-4">HORÁRIOS</h1>
         
-        <img src="img/horarios.png" alt="Horários"z>
+        <p class="text-gray-400 italic">Em breve serão divulgados os horários completos dos dias 11 e 12 de Julho.</p>
 
       </div>
     
     </section>
 
-    <!-- ART MARKET ---------------------------------------------------------------------------------------------------------------------->
     <section id="artmarket" class="pt-16 mb-12">
-
+     
       <div class="mb-4">
         <h1 class="text-4xl md:text-4xl text-teal-600 mb-4">ART MARKET</h1>
+        
+        <p class="text-gray-400 italic">Info em breve.</p>
 
-        <img src="img/death.png" alt="">
-          <p>
-            A grande novidade da edição de 2025 é o ART MARKET, neste espaço recebemos e damos visibilidade a artistas e artesãos do
-            underground nacional, que irão mostrar o seu trabalho e expor e vender as suas obras durante os dois dias do festival.
-          </p>
-
-          <div class="container mx-auto p-4 mt-2">
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-              
-              <div class="text-center">
-                <a href="img/echoecho.jpg" target="_blank">
-                  <img src="img/echoecho.jpg" alt="Echo Echo" class="w-full h-40 object-cover rounded-md" />
-                </a>
-                <p class="mt-2 font-bold">ECHO ECHO</p>
-                <p class="mt-2 text-gray-400">Ilustração</p>
-              </div>
-              
-              <div class="text-center">
-                <a href="img/MikyMorgado.jpg" target="_blank">
-                  <img src="img/MikyMorgado.jpg" alt="Miky Morgado" class="w-full h-40 object-cover rounded-md" />
-                </a>
-                <p class="mt-2 font-bold">MIKY MORGADO</p>
-                <p class="mt-2 text-gray-400">Ilustração | Gravura | Desenho | Pintura</p>
-              </div>
-              
-              <div class="text-center">
-               <a href="img/barget.jpg" target="_blank">
-                  <img src="img/barget.jpg" alt="Barget" class="w-full h-40 object-cover rounded-md" />
-                </a>
-                <p class="mt-2 font-bold">BARGET</p>
-                <p class="mt-2 text-gray-400">Crochet | Fashion</p>
-              </div>
-              
-              <div class="text-center">
-                <a href="img/fire.jpg" target="_blank">
-                  <img src="img/fire.jpg" alt="Fire" class="w-full h-40 object-cover rounded-md" />
-                </a>
-                <p class="mt-2 font-bold">FIRE</p>
-                <p class="mt-2 text-gray-400">Design | Fotografia | Ilustração | Branding | Paginação</p>
-              </div>
-              
-            </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-              
-              <div class="text-center">
-                <a href="img/MysticAlien.jpg" target="_blank">
-                  <img src="img/MysticAlien.jpg" alt="Echo Echo" class="w-full h-40 object-cover rounded-md" />
-                </a>
-                <p class="mt-2 font-bold">MYSTIC ALIEN</p>
-                <p class="mt-2 text-gray-400">Artesanato | Bijuteria | Ilustração | Pintura</p>
-              </div>
-              
-              <div class="text-center">
-                <a href="img/artesanosdel18.jpg" target="_blank">
-                  <img src="img/artesanosdel18.jpg" alt="Artesanos Del 18" class="w-full h-40 object-cover rounded-md" />
-                </a>
-                <p class="mt-2 font-bold">ARTESANOS DEL 18</p>
-                <p class="mt-2 text-gray-400">Artesanato</p>
-              </div>
-              
-              <div class="text-center">
-               <a href="img/antichristossaurus.jpg" target="_blank">
-                  <img src="img/antichristossaurus.jpg" alt="Antichristossaurus" class="w-full h-40 object-cover rounded-md" />
-                </a>
-                <p class="mt-2 font-bold">ANTICHRISTOSSAURUS</p>
-                <p class="mt-2 text-gray-400">Ilustração | Design</p>
-              </div>
-              
-              <div class="text-center">
-                <a href="img/veiacava2025.jpg" target="_blank">
-                  <img src="img/veiacava2025.jpg" alt="Veia Cava" class="w-full h-40 object-cover rounded-md" />
-                </a>
-                <p class="mt-2 font-bold">VEIA CAVA</p>
-                <p class="mt-2 text-gray-400">Fotografia | Cinema | Design | Porcelana</p>
-              </div>
-              
-            </div>
-          </div>
-
-          <img src="img/bottom.png" alt="">
       </div>
       
     </section>
 
-    <!-- LOCALIZACAO ---------------------------------------------------------------------------------------------------------------------->
     <section id="local" class="pt-16 mb-12">
      
-      <div class="mb-4 mt-2">
+      <div class="mb-4">
         <h1 class="text-4xl md:text-4xl text-teal-600 mb-4">LOCALIZAÇÃO</h1>
         
-        <div class="container mx-auto p-6">
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-            
-            <div>
-              <h2 class="text-2xl mb-4">Como chegar</h2>
-              <p class="text-gray-400">
-                A 25 > Saída 12 > O. Frades > Sejães > VALADARES
-              </p>
+        <p class="text-gray-400 italic">Info em breve.</p>
 
-              <h2 class="text-2xl mb-4 mt-4">Distâncias</h2>
-           
-                <ul class="text-gray-400">
-                  <li>Viseu	- 30 min</li>
-                  <li>Porto - 60 min</li>
-                  <li>Aveiro - 45 min</li>
-                  <li>Guarda	- 75 min</li>
-                  <li>Coimbra - 75 min</li>
-                  <li>Lamego - 60 min</li>
-                  <li>Salamanca	- 2h 45 min</li>
-                </ul>
-         
-            </div>
-
-            <div>
-             
-              <iframe 
-                class="w-full h-64 md:h-80 rounded-md shadow-md"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.232934405053!2d-8.202662923534675!3d40.7569012348649!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd2369337ccd57f9%3A0xa1500d391db815ba!2sBajonca%20Rock%20Fest!5e0!3m2!1spt-PT!2spt!4v1749802229492!5m2!1spt-PT!2spt" 
-                width="300" height="225" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-              </iframe>
-
-               <a href="https://maps.app.goo.gl/LfoGiPweHCgEuxAu9" target="_blank">
-                Ver no Google Maps
-               </a>
-            </div>
-
-          </div>
-        </div>
       </div>
       
     </section>
 
-    <!-- ZONA ---------------------------------------------------------------------------------------------------------------------->
-    <section id="zona" class="pt-16 mb-12">
-     
-      <div class="mb-4 mt-2">
-        <h1 class="text-4xl md:text-4xl text-teal-600 mb-4">ZONA</h1> 
-
-        <p class="text-gray-400 mt-4">
-          Nas redondezas do festival há uma série de locais de interesse que podes visitar.
-        </p>
-        
-        <h3 class="font-bold mt-4">Praias fluviais</h3>
-        <br>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-              
-              <div class="text-center">
-                <a href="https://www.vagamundos.pt/wp-content/uploads/2020/11/1-28.jpg" target="_blank">
-                  <img src="https://www.vagamundos.pt/wp-content/uploads/2020/11/1-28.jpg" alt="Poço negro" class="w-full h-40 object-cover rounded-md" />
-                </a>
-                <p class="mt-2 font-bold">Poço negro</p>
-                <p class="mt-2 text-gray-400">18 minutos de carro de Valadares</p>
-                <p class="mt-2 text-gray-400 font-bold">
-                  <a href="https://maps.app.goo.gl/Tb9L6JF7dtAkmtqt7" target="_blank">Localização</a>
-                  <br>
-                  <a href="https://www.vagamundos.pt/cascata-poco-negro-manhouce/" target="_blank">Info</a>
-                </p>
-              </div>
-              
-              <div class="text-center">
-                <a href="https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrCmEq-O-jgzYm4W2gNX058QOKcrGpvMUjUAeE1dT7e_LQW9T8kJXks4aIlpT0w_vhXCrVSoyzqPob6bQcndPsdhrXgrVH6xBSEv39TMavs09-FaWqG1B-iKgC4---OjxWHYGWC=s680-w680-h510" target="_blank">
-                  <img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrCmEq-O-jgzYm4W2gNX058QOKcrGpvMUjUAeE1dT7e_LQW9T8kJXks4aIlpT0w_vhXCrVSoyzqPob6bQcndPsdhrXgrVH6xBSEv39TMavs09-FaWqG1B-iKgC4---OjxWHYGWC=s680-w680-h510" alt="Poço da barreira" class="w-full h-40 object-cover rounded-md" />
-                </a>
-                <p class="mt-2 font-bold">Poço da Barreira</p>
-                <p class="mt-2 text-gray-400">18 minutos de carro de Valadares</p>
-                <p class="mt-2 text-gray-400 font-bold">
-                  <a href="https://maps.app.goo.gl/K1VTnK6hpTcxdn358" target="_blank">Localização</a>
-                  <br>
-                  <a href="https://recantoseencantosdeportugal.blogs.sapo.pt/a-descoberta-dos-pocos-da-barreira-gola-32020" target="_blank">Info</a>
-                </p>
-              </div>
-              
-              <div class="text-center">
-                <a href="https://i0.wp.com/trilhosemilhas.wordpress.com/wp-content/uploads/2015/10/gopr1765.jpg?w=2000&h=&ssl=1" target="_blank">
-                  <img src="https://i0.wp.com/trilhosemilhas.wordpress.com/wp-content/uploads/2015/10/gopr1765.jpg?w=2000&h=&ssl=1" alt="Poço azul" class="w-full h-40 object-cover rounded-md" />
-                </a>
-                <p class="mt-2 font-bold">Poço azul</p>
-                <p class="mt-2 text-gray-400">11 minutos de Valadares</p>
-                <p class="mt-2 text-gray-400 font-bold">
-                  <a href="https://maps.app.goo.gl/8Xav5nSuKpytr7zB7" target="_blank">Localização</a>
-                  <br>
-                  <a href="https://trilhosemilhas.wordpress.com/2015/10/04/poco-azul-e-poco-negro-s-pedro-do-sul-viseu/" target="_blank">Info</a>
-                </p>
-              </div>
-              
-              <div class="text-center">
-                <a href="https://arquivo.visitlafoes.pt/wp-content/uploads/2020/08/ZonaFruicao-Sejaes1.jpg" target="_blank">
-                  <img src="https://arquivo.visitlafoes.pt/wp-content/uploads/2020/08/ZonaFruicao-Sejaes1.jpg" alt="Zona Ribeirinha de Sejães" class="w-full h-40 object-cover rounded-md" />
-                </a>
-                <p class="mt-2 font-bold">Zona de Fruição Ribeirinha de Sejães</p>
-                <p class="mt-2 text-gray-400">5 minutos de carro de Valadares</p>
-                <p class="mt-2 text-gray-400 font-bold">
-                  <a href="https://maps.app.goo.gl/kF7BzvyYvDuvZ1CW9" target="_blank">Localização</a>
-                  <br>
-                  <a href="https://arquivo.visitlafoes.pt/mexer/zona-ribeirinha-sejaes/" target="_blank">Info</a>
-                </p>
-              </div>
-              
-            </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-              
-              <div class="text-center">
-                <a href="https://noticiasdevouzela.pt/wp-content/uploads/2024/08/3.jpeg" target="_blank">
-                  <img src="https://noticiasdevouzela.pt/wp-content/uploads/2024/08/3.jpeg" alt="Praia Fluvial da Carriça" class="w-full h-40 object-cover rounded-md" />
-                </a>
-                <p class="mt-2 font-bold">Praia Fluvial da Carriça</p>
-                <p class="mt-2 text-gray-400">17 minutos de carro de Valadares</p>
-                <p class="mt-2 text-gray-400 font-bold">
-                  <a href="https://maps.app.goo.gl/F1ev3yfjdeoAuqFw9" target="_blank">Localização</a>
-                  <br>
-                  <a href="https://aquapolis.com.pt/zona-de-fruicao-ribeirinha-da-carrica-sao-joao-da-serra/" target="_blank">Info</a>
-                </p>
-              </div>
-              
-            </div>
-
-        <h3 class="font-bold mt-4">Locais de Interesse</h3>
-        <br>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-              
-              <div class="text-center">
-                <a href="http://gazetadabeira.pt/wp-content/uploads/2019/02/756_SPS_FM-Termas.jpg" target="_blank">
-                  <img src="http://gazetadabeira.pt/wp-content/uploads/2019/02/756_SPS_FM-Termas.jpg" alt="Termas S. Pedro do Sul" class="w-full h-40 object-cover rounded-md" />
-                </a>
-                <p class="mt-2 font-bold">Termas S. Pedro do Sul</p>
-                <p class="mt-2 text-gray-400">25 minutos de carro de Valadares</p>
-                <p class="mt-2 text-gray-400 font-bold">
-                  <a href="https://maps.app.goo.gl/4DNK5Yx6Z5suB9vo6" target="_blank">Localização</a>
-                  <br>
-                  <a href="https://termas-spsul.com/" target="_blank">Info</a>
-                </p>
-              </div>
-              
-              <div class="text-center">
-                <a href="https://bioparque.org/wp-content/uploads/2022/07/bioparque-piscinas-9.jpg" target="_blank">
-                  <img src="https://bioparque.org/wp-content/uploads/2022/07/bioparque-piscinas-9.jpg" alt="Poço da barreira" class="w-full h-40 object-cover rounded-md" />
-                </a>
-                <p class="mt-2 font-bold">Bioparque de Carvalhais</p>
-                <p class="mt-2 text-gray-400">19 minutos de carro de Valadares</p>
-                <p class="mt-2 text-gray-400 font-bold">
-                  <a href="https://maps.app.goo.gl/wWKMtPa5rnwUHLUc7" target="_blank">Localização</a>
-                  <br>
-                  <a href="https://bioparque.org/obioparque/" target="_blank">Info</a>
-                </p>
-              </div>
-              
-              <div class="text-center">
-                <a href="https://i0.wp.com/quilometroinfinito.com/wp-content/uploads/2021/04/Serra-Freita-Mota_60-1.jpg?resize=768%2C512&ssl=1" target="_blank">
-                  <img src="https://i0.wp.com/quilometroinfinito.com/wp-content/uploads/2021/04/Serra-Freita-Mota_60-1.jpg?resize=768%2C512&ssl=1" alt="Serra da Arada" class="w-full h-40 object-cover rounded-md" />
-                </a>
-                <p class="mt-2 font-bold">Serra da Arada</p>
-                <p class="mt-2 text-gray-400">26 minutos de carro de Valadares</p>
-                <p class="mt-2 text-gray-400 font-bold">
-                  <a href="https://maps.app.goo.gl/ssL8YoM3qSW3kdjN8" target="_blank">Localização</a>
-                  <br>
-                  <a href="https://quilometroinfinito.com/serra-da-arada-portal-do-inferno/" target="_blank">Info</a>
-                </p>
-              </div>
-              
-              <div class="text-center">
-                <a href="https://rap.montanhasmagicas.pt/wp-content/uploads/2022/10/Levada-5-851x1024.jpeg" target="_blank">
-                  <img src="https://rap.montanhasmagicas.pt/wp-content/uploads/2022/10/Levada-5-851x1024.jpeg" alt="Levada de Paradela" class="w-full h-40 object-cover rounded-md" />
-                </a>
-                <p class="mt-2 font-bold">Levada de Paradela</p>
-                <p class="mt-2 text-gray-400">4 minutos de carro de Valadares</p>
-                <p class="mt-2 text-gray-400 font-bold">
-                  <a href="https://maps.app.goo.gl/ovbgUYei9hdhoFwP9" target="_blank">Localização</a>
-                  <br>
-                  <a href="https://rap.montanhasmagicas.pt/points_of_interest/levada-de-paradela/" target="_blank">Info</a>
-                </p>
-              </div>
-            </div>
-
-            <div class="grid mt-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-              
-              <div class="text-center">
-                <a href="http://webbox.imgix.net/images/gamdvmngslccjodh/c0182cad-53ae-4fba-852b-f4af6a91f170.jpg" target="_blank">
-                  <img src="http://webbox.imgix.net/images/gamdvmngslccjodh/c0182cad-53ae-4fba-852b-f4af6a91f170.jpg" alt="Mosteiro de S. Cristovão de Lafões" class="w-full h-40 object-cover rounded-md" />
-                </a>
-                <p class="mt-2 font-bold">Mosteiro de S. Cristóvão de Lafões</p>
-                <p class="mt-2 text-gray-400">10 minutos de carro de Valadares</p>
-                <p class="mt-2 text-gray-400 font-bold">
-                  <a href="https://maps.app.goo.gl/mMwVUZ5wFeNPQxvo9" target="_blank">Localização</a>
-                  <br>
-                  <a href="https://www.mosteirosaocristovao.com/pt/index.html" target="_blank">Info</a>
-                </p>
-              </div>
-              
-              <div class="text-center">
-                <a href="https://escapadinhas.org/img/Escapadinha_494_1.jpg" target="_blank">
-                  <img src="https://escapadinhas.org/img/Escapadinha_494_1.jpg" alt="Drave Aldeia Mágica" class="w-full h-40 object-cover rounded-md" />
-                </a>
-                <p class="mt-2 font-bold">Drave - Aldeia Mágica</p>
-                <p class="mt-2 text-gray-400">45 minutos de carro de Valadares (+1hora a pé)</p>
-                <p class="mt-2 text-gray-400 font-bold">
-                  <a href="https://maps.app.goo.gl/3jnhGd8jXCN3oq6B7" target="_blank">Localização</a>
-                  <br>
-                  <a href="https://drave.pt/" target="_blank">Info</a>
-                </p>
-              </div>
-              
-              <div class="text-center">
-                <a href="https://s1.wklcdn.com/image_29/882536/77350156/50592595Master.jpg" target="_blank">
-                  <img src="https://s1.wklcdn.com/image_29/882536/77350156/50592595Master.jpg" alt="Serra da Arada" class="w-full h-40 object-cover rounded-md" />
-                </a>
-                <p class="mt-2 font-bold">PR8 - Rota da Laranja</p>
-                <p class="mt-2 text-gray-400">5 horas a pé<p>
-                <p class="mt-2 text-gray-400 font-bold">
-                  <a href="https://maps.app.goo.gl/ssL8YoM3qSW3kdjN8" target="_blank">Localização</a>
-                  <br>
-                  <a href="https://quilometroinfinito.com/serra-da-arada-portal-do-inferno/" target="_blank">Info</a>
-                </p>
-              </div>
-              
-              <div class="text-center">
-                <a href="https://www.cm-spsul.pt/images/images/imagens/turismo/aldeia_pena_2.jpg" target="_blank">
-                  <img src="https://www.cm-spsul.pt/images/images/imagens/turismo/aldeia_pena_2.jpg" alt="Serra da Arada" class="w-full h-40 object-cover rounded-md" />
-                </a>
-                <p class="mt-2 font-bold">Aldeias típicas </p>
-                <p class="mt-2 text-gray-400">10 a 45 minutos de carro de Valadares</p>
-                <p class="mt-2 text-gray-400 font-bold">
-                  <a href="https://maps.app.goo.gl/jrBy1eutm1uSf5F97" target="_blank">Localização</a>
-                  <br>
-                  <a href="https://www.cm-spsul.pt/conteudo.asp?idcat=149" target="_blank">Info</a>
-                </p>
-              </div>
-
-          </div>
-      
-    </section>
-
-    <!-- INFO ---------------------------------------------------------------------------------------------------------------------->
     <section id="info" class="pt-16 mb-12">
      
-      <div class="mb-4 mt-2">
+      <div class="mb-4">
         <h1 class="text-4xl md:text-4xl text-teal-600 mb-4">INFO</h1>
-
-        <p>
-          <img src="img/mapafestival2025.jpg" alt="Mapa do Festival" class="w-full h-auto rounded-lg shadow-md mb-4">
-        </p>
-        <p class="text-gray-300">
-          O festival é de entrada gratuita.
-        </p>
-        <br>
-          <h3 class="font-bold">Campismo</h3>
-        <br>
-        <ul class="list-disc list-inside text-gray-300 space-y-1">
-          <li>O festival dispõe de espaço para campismo para quem quiser ficar durante os dias do festival.</li>
-          <li>O campismo é dotado de uns balneários modernos do campo desportivo da aldeia.</li>
-          <li>Os balneários têm água quente e tem wc.</li>
-          <li>Dispomos de um espaço para autocaravanismo (entre em contacto connosco para mais informações).</li>
-          <li>Na aldeia não há qualquer tipo de comércio, o mercado mais próximo fica a cerca de 15minutos de carro.</li>
-        </ul>
-        <br>
-          <h3 class="font-bold">Pagamentos</h3>
-        <br>
-        <ul class="list-disc list-inside text-gray-300 space-y-1">
-          <li>O pagamento nas nossas barracas (cerveja, água, sumos, cafés, comida) é feito através de senhas.</li>
-          <li>As senhas são adquiridas na nossa barraca de senhas.</li>
-          <li>Aceitamos pagamento por multibanco e mbway.</li>
-          <li>Não há multibancos próximos para levantamento de dinheiro.</li>
-          <li>Nas barracas dos nossos parceiros e Art Market, o pagamento é da inteira responsabilidade dos mesmos.</li>
-        </ul>
-          <br>
-            <h3 class="font-bold">Normas</h3>
-          <br>
-        <ul class="list-disc list-inside text-gray-300 space-y-1">
-          <li>É proibido permanecer no recinto após os concertos, excepto durante o dia quando o recinto abrir.</li>
-          <li>É proibida a entrada de comida e ou bebida de fora no recinto.</li>
-          <li>É proibida a venda ambulante (não permitida) no interior ou no exterior do recinto.</li>
-        </ul>
+        
+        <p class="text-gray-400 italic">Info em breve.</p>
 
       </div>
       
     </section>
-
-    <!-- Parceiros ---------------------------------------------------------------------------------------------------------------------->
 
     <section id="parceiros" class="pt-16 mb-12">
      
       <div class="mb-4">
         <h1 class="text-4xl md:text-4xl text-teal-600 mb-4">PARCEIROS</h1>
         
-        <div class="mb-12">
-          <h2 class="text-2xl text-white mb-4 inline-block pb-1">🍻 Parceiros com espaço no festival</h2>
-          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 mt-4">
-            
-            <div class="bg-zinc-900 rounded-lg p-4 shadow-md hover:scale-105 transition-transform text-center">
-              <a href="https://selvajariarecords.blogs.sapo.pt/" class="block text-white text-lg font-bold">Selvajaria Records</a>
-              <p class="text-gray-400 text-sm mt-1">Label underground independente e distribuidor de música</p>
-            </div>
-            
-            <div class="bg-zinc-900 rounded-lg p-4 shadow-md hover:scale-105 transition-transform text-center">
-              <a href="https://www.facebook.com/terramotodiscos" class="block text-white text-lg font-bold">Terramoto</a>
-              <p class="text-gray-400 text-sm mt-1">Loja/distribuidor de música</p>
-            </div>
-
-            <div class="bg-zinc-900 rounded-lg p-4 shadow-md hover:scale-105 transition-transform text-center">
-              <a href="https://arca-velha-bar.webnode.pt" class="block text-white text-lg font-bold">Arca Velha</a>
-              <p class="text-gray-400 text-sm mt-1">Bistro Bar</p>
-            </div>
-
-            <div class="bg-zinc-900 rounded-lg p-4 shadow-md hover:scale-105 transition-transform text-center">
-              <a href="https://www.instagram.com/nuno__pinto_/" class="block text-white text-lg font-bold">NP Tattoo</a>
-              <p class="text-gray-400 text-sm mt-1">Barbeiro & Tattoo shop</p>
-            </div>
-
-             <div class="bg-zinc-900 rounded-lg p-4 shadow-md hover:scale-105 transition-transform text-center">
-              <a href="https://www.instagram.com/cenas_e_isso/" class="block text-white text-lg font-bold">Andreia Rodrigues</a>
-              <p class="text-gray-400 text-sm mt-1">Massagista terapeuta</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Parceiros logísticos -->
-        <div class="mb-12">
-          <h2 class="text-2xl text-white mb-4 inline-block pb-1">🛠️ Parceiros Logísticos</h2>
-          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 mt-4">
-            <div class="bg-zinc-900 rounded-lg p-4 shadow-md hover:scale-105 transition-transform text-center">
-              <a href="https://freguesiavaladares.pt/" class="block text-white text-lg font-bold">Junta de Freguesia de Valadares</a>
-              <p class="text-gray-400 text-sm mt-1">Junta de Freguesia</p>
-            </div>
-
-            <div class="bg-zinc-900 rounded-lg p-4 shadow-md hover:scale-105 transition-transform text-center">
-              <a href="https://www.cm-spsul.pt/" class="block text-white text-lg font-bold">Câmara Municipal S. Pedro do Sul</a>
-              <p class="text-gray-400 text-sm mt-1">Câmara Municipal</p>
-            </div>
-
-            <div class="bg-zinc-900 rounded-lg p-4 shadow-md hover:scale-105 transition-transform text-center">
-              <a href="https://www.facebook.com/foraderebanho" class="block text-white text-lg font-bold">Fora de Rebanho</a>
-              <p class="text-gray-400 text-sm mt-1">Associação Cultural</p>
-            </div>
-
-             <div class="bg-zinc-900 rounded-lg p-4 shadow-md hover:scale-105 transition-transform text-center">
-              <a href="https://www.facebook.com/supertalhovouzelense/" class="block text-white text-lg font-bold">Super Talho Vouzelense</a>
-              <p class="text-gray-400 text-sm mt-1">Talho</p>
-            </div>
-
-            <div class="bg-zinc-900 rounded-lg p-4 shadow-md hover:scale-105 transition-transform text-center">
-              <a href="https://serviplus.pt/" class="block text-white text-lg font-bold">Serviplus</a>
-              <p class="text-gray-400 text-sm mt-1">Mediação de Seguros</p>
-            </div>
-
-            <div class="bg-zinc-900 rounded-lg p-4 shadow-md hover:scale-105 transition-transform text-center">
-              <a href="https://www.facebook.com/deathoverrome/" class="block text-white text-lg font-bold">Death Over Rome</a>
-              <p class="text-gray-400 text-sm mt-1">Agência de artistas</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Media Partners -->
-        <div class="mb-12">
-          <h2 class="text-2xl text-white mb-4 inline-block pb-1">📡 Media Partners</h2>
-          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 mt-4">
-            <div class="bg-zinc-900 rounded-lg p-4 shadow-md hover:scale-105 transition-transform text-center">
-              <a href="https://www.caminhosmetalicos.com/" class="block text-white text-lg font-bold">Caminhos Metálicos</a>
-            </div>
-
-            <div class="bg-zinc-900 rounded-lg p-4 shadow-md hover:scale-105 transition-transform text-center">
-              <a href="https://worldofmetalmag.com/" class="block text-white text-lg font-bold">World Of Metal</a>
-            </div>
-
-            <div class="bg-zinc-900 rounded-lg p-4 shadow-md hover:scale-105 transition-transform text-center">
-              <a href="https://metalmorfose.blogspot.com/" class="block text-white text-lg font-bold">MetalMorfose</a>
-            </div>
-
-            <div class="bg-zinc-900 rounded-lg p-4 shadow-md hover:scale-105 transition-transform text-center">
-              <a href="https://metalglobal.pt/" class="block text-white text-lg font-bold">Metal Global</a>
-            </div>
-
-            <div class="bg-zinc-900 rounded-lg p-4 shadow-md hover:scale-105 transition-transform text-center">
-              <a href="https://www.facebook.com/EmbuscadoRockperdido/" class="block text-white text-lg font-bold">Em Busca Do Rock Perdido</a>
-            </div>
-
-            <div class="bg-zinc-900 rounded-lg p-4 shadow-md hover:scale-105 transition-transform text-center">
-              <a href="https://www.radioaltatensao.com/" class="block text-white text-lg font-bold">Rádio Alta Tensão</a>
-            </div>
-          </div>
-        </div>
+        <p class="text-gray-400 italic">Info em breve.</p>
 
       </div>
       
     </section>
 
-    <section id="historia" class="pt-16 mb-12">
-     
-      <div class="mb-4">
-        <h1 class="text-4xl md:text-4xl text-teal-600 mb-4">HISTÓRIA</h1>
-        
-        <p class="text-gray-400">
-          O Bajonca Rock Fest foi criado como uma celebração à criação do mundo e à sua origem na mina da Bajonca.
-          Segundo a história local (bem regada com álcool), existe uma mina em Valadares, chamada Bajonca, que deu origem ao mundo como o conhecemos.
-        </p>
-
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mt-4">
-              
-          <div class="text-center">
-            <a href="img/cartaz2023.jpg" target="_blank">
-              <img src="img/cartaz2023.jpg" alt="1ª Edição | 2023" class="w-full h-80 object-cover rounded-md" />
-            </a>
-            <p class="mt-2 font-bold">1ª Edição | 2 Setembro 2023</p>
-
-            <ul class="text-gray-400">
-              <li>Revolution Within</li>
-              <li>Godark</li>
-              <li>Zurrapa</li>
-              <li>Warout</li>
-              <li>Raven Horse</li>
-              <li>Aoidos</li>
-              <li>Gizzah</li>
-              <li>Overhated</li>
-            </ul>
-
-          </div>
-          
-          <div class="text-center">
-            <a href="img/cartaz2024.jpg" target="_blank">
-              <img src="img/cartaz2024.jpg" alt="2ª Edição | 2024" class="w-full h-80 object-cover rounded-md" />
-            </a>
-            <p class="mt-2 font-bold">2ª Edição | 31 Agosto 2024</p>
-
-            <ul class="text-gray-400">
-              <li>The Temple</li>
-              <li>Infraktor</li>
-              <li>Perennial Isolation</li>
-              <li>Desert' Smoke</li>
-              <li>Vectis</li>
-              <li>Great Fool</li>
-              <li>Resurge</li>
-              <li>Ladon Heads</li>
-              <li>Sandmind</li>
-            </ul>
-
-          </div>
-          
-          <div class="text-center">
-            <a href="img/cartaz2025.jpg" target="_blank">
-              <img src="img/cartaz2025.jpg" alt="2ª Edição | 2024" class="w-full h-80 object-cover rounded-md" />
-            </a>
-            <p class="mt-2 font-bold">3ª Edição | 11-12 Julho 2025</p>
-
-            <ul class="text-gray-400">
-              <li>Keres</li>
-              <li>Helevorn</li>
-              <li>All Against</li>
-              <li>Madmess</li>
-              <li>Wanderer</li>
-              <li>Nel Buio</li>
-              <li>Amaterazu</li>
-              <li>Tvmvlo</li>
-              <li>Santa Planta</li>
-              <li>Inverted Cross</li>
-              <li>Yaatana</li>
-              <li>Spin The Skull</li>
-              <li>Mau Jesus</li>
-            </ul>
-
-          </div>
-
-          <div class="text-center">
-            <a href="img/cartaz2026.jpg" target="_blank">
-              <img src="img/cartaz2026.jpg" alt="4ª Edição | 2026" class="w-full h-80 object-cover rounded-md" />
-            </a>
-            <p class="mt-2 font-bold">4ª Edição | 2026</p>
-
-            <ul class="text-gray-400">
-              <li>Soon</li>
-            </ul>
- 
-          </div>
-          
-        </div>
-
-      </div>
-
-    </section>
-
-    <section id="acerca" class="pt-16 mb-12">
+    <section id="parceiros" class="pt-16 mb-12">
      
       <div class="mb-4">
         <h1 class="text-4xl md:text-4xl text-teal-600 mb-4">ABOUT US</h1>
         
-        <p class="text-gray-400">
-            O Bajonca Rock Fest é um festival de entrada gratuita organizdo pela "Bajonca - Associação Cultural e Recreativa" (Associação sem fins lucrativos) 
-            que tem como objetivo promover a cultura e a música underground, trazer essa cultura ao interior proporcionando um espaço para bandas emergentes e 
-            consagradas do género Metal e Rock, promover o património natural da região e proporcionar uma experiência única aos amantes da música e da natureza.
-            O festival é realizado anualmente em Valadares, uma pequena aldeia situada no concelho de São Pedro do Sul, Viseu, 
-            rodeada por uma paisagem natural deslumbrante, com montanhas, rios e florestas que criam um ambiente perfeito para a música ao vivo.
-            Desde a sua primeira edição, em 2023, o festival tem crescido em popularidade, atraindo fãs de todo o país e além.
-            <br><br>
-              <p>
-              Siga-nos nas redes sociais:
-              </p>
-            <br>
-            <a href="https://www.facebook.com/bajoncafest" target="_blank" class="text-teal-500 hover:underline">Facebook</a>
-            <br>
-            <a href="https://www.instagram.com/bajoncafest/" target="_blank" class="text-teal-500 hover:underline">Instagram</a>
-            <br>
-            <a href="mailto:bajonca.acr@gmail.com" target="_blank" class="text-teal-500 hover:underline">Email geral</a>
-            <br>
-            <a href="mailto:bajonca.acr@gmail.com" target="_blank" class="text-teal-500 hover:underline">Email para artistas</a>
-          </p>
+        <p class="text-gray-400 italic">Info em breve.</p>
+
       </div>
 
     </section>
 
-    </div>
   </main>
 
   <footer class="text-center text-gray-500 text-sm py-6 border-t border-gray-700">
