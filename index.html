@@ -10,7 +10,6 @@
       theme: {
         extend: {
           fontFamily: {
-            // Isto cria a classe 'font-inter' e 'font-bebas'
             'inter': ['Inter', 'sans-serif'],
             'bebas': ['"Bebas Neue"', 'cursive'],
             'anton': ['Anton', 'sans-serif'],
@@ -27,17 +26,14 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons/css/flag-icons.min.css">
 </head>
 
-<body class="min-h-screen flex flex-col m-0 p-0 ">
+<body class="min-h-screen flex flex-col m-0 p-0 scroll-smooth">
+
   <div class="bg-black border-b border-gray-700 w-full font-bold fixed top-0 z-50">
     <nav class="p-2 mx-auto z-50">
       <div class="container mx-auto flex justify-between items-center">
-  
-        <!-- Placeholder à esquerda (vazio para centralizar) -->
 
-  
         <!-- Menu Desktop Centrado -->
         <ul class="hidden md:flex mx-auto space-x-6 text-white">
-          
           <li><a href="#" class="hover:text-teal-600">HOME</a></li>
           <li><a href="#cartaz" class="hover:text-teal-600">CARTAZ</a></li>
           <li><a href="#horarios" class="hover:text-teal-600">HORÁRIOS</a></li>
@@ -46,10 +42,9 @@
           <li><a href="#info" class="hover:text-teal-600">INFO</a></li>
           <li><a href="#parceiros" class="hover:text-teal-600">PARCEIROS</a></li>
           <li><a href="#about" class="hover:text-teal-600">SOBRE NÓS</a></li>
-          <li><span class="fi fi-es" alt="Version en Español"></span></li>
-          <li><span class="fi fi-gb" alt="English version"></span></li>
+          
         </ul>
-  
+
         <!-- Botão Mobile à direita -->
         <button id="menu-btn" class="text-white md:hidden w-6">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
@@ -59,7 +54,7 @@
           </svg>
         </button>
       </div>
-  
+
       <!-- Menu Mobile -->
       <ul id="mobile-menu" class="md:hidden hidden flex-col space-y-2 mt-4 px-4 text-white text-right">
         <li><a href="#" class="hover:text-teal-600 block">HOME</a></li>
@@ -67,696 +62,566 @@
         <li><a href="#horarios" class="hover:text-teal-600 block">HORÁRIOS</a></li>
         <li><a href="#cartaz" class="hover:text-teal-600 block">ART MARKET</a></li>
         <li><a href="#artmarket" class="hover:text-teal-600 block">COMO CHEGAR</a></li>
-        <li><a href="#" class="hover:text-teal-600 block">INFO</a></li>
-        <li><a href="#" class="hover:text-teal-600 block">PARCEIROS</a></li>
-        <li><a href="#" class="hover:text-teal-600 block">ABOUT US</a></li>
+        <li><a href="#info" class="hover:text-teal-600 block">INFO</a></li>
+        <li><a href="#parceiros" class="hover:text-teal-600 block">PARCEIROS</a></li>
+        <li><a href="#about" class="hover:text-teal-600 block">ABOUT US</a></li>
       </ul>
     </nav>
   </div>
-  
+
   <script>
     const btn = document.getElementById('menu-btn');
     const menu = document.getElementById('mobile-menu');
-  
+
     btn.addEventListener('click', () => {
       menu.classList.toggle('hidden');
     });
-  
-    // Fecha o menu ao clicar num item
+
     menu.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         menu.classList.add('hidden');
       });
     });
   </script>
-  
+
   <!-- HOME -->
-  <div class="flex flex-col items-center h-screen justify-center w-full text-center px-4 divider-bottom">
+  <div class="flex flex-col items-center justify-center w-full text-center px-4 py-24 md:py-0 min-h-screen">
 
     <img src="img/logo2024.png" alt="Bajonca Rock Fest Logo"
          class="w-2/3 sm:w-1/2 md:w-1/3 lg:w-1/4 h-auto object-contain mb-4">
-  
+
     <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-primary-2026 mb-2">
       BAJONCA ROCK FEST IV
     </h1>
 
-     <p>   
-      <span class="fi fi-pt text-xl" ></span>
-    </p>  
-  
-    <p class="hidden text-xl md:block md:text-xl text-gray-300 m-2">
+    <p><span class="fi fi-pt text-xl" ></span></p>  
+
+    <p class="hidden md:block text-xl text-gray-300 m-2">
       10-11/07/2026 | Valadares, S. Pedro do Sul, Viseu - Portugal
       <br>
       Entrada gratuita | Camping gratuito | Art Market | Merch | Natureza
     </p>
 
-    <p class="text-base md:hidden text-gray-300">
+    <p class="md:hidden text-base text-gray-300">
       10-11/07/2026 <br> Valadares, S. Pedro do Sul, Viseu - Portugal
       <br>
       Entrada gratuita | Camping gratuito | Art Market | Merch | Natureza 
     </p>
 
   </div>
-  
 
-  <main class="flex-1 mx-auto text-center">
-     
+  <main class="flex-1 mx-auto text-center scroll-mt-20">
+
     <!-- CARTAZ -->
-    <section id="cartaz" class="pt-16 mb-12 bg-black pb-4 divider-bottom">
+    <section id="cartaz" class="pt-16 mb-12 bg-black pb-4">
 
       <!-- DIVIDER -->
       <div class="flex items-center justify-center w-full mb-12">
         <img src="img/fox-divider.png" class="w-1/2" alt="">
       </div>
-      
-      <div class="mb-4">
+
+      <div class="mb-4 px-4">
         <h1 class="text-4xl md:text-7xl text-primary-2026 mb-4">CARTAZ</h1>
-        
         <a href="img/cartaz2026.jpg" target="_blank">
-          <img src="img/cartaz2026.jpg" alt="Bajonca Rock Fest" class="mx-auto w-1/2 h-auto mt-4 rounded-lg ">
+          <img src="img/cartaz2026.jpg" alt="Bajonca Rock Fest" class="mx-auto w-full sm:w-2/3 md:w-1/2 lg:w-1/3 h-auto mt-4 rounded-lg">
         </a>
       </div>
 
-    <!-- UNDEAD | WET CACTUS -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-8">
-      <div class="grid grid-cols-1 md:grid-cols-2">
-        
-        <div class="pl-6">
-              <img src="img/b_Undead.jpg" alt="UNDEAD" class="rounded-lg">
+      <!-- BANDAS -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-8 px-4">
+
+        <!-- UNDEAD -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-start">
+          <div>
+            <img src="img/b_Undead.jpg" alt="UNDEAD" class="w-full max-w-sm mx-auto rounded-lg">
+          </div>
+          <div class="flex flex-col gap-3 md:pl-6 items-center md:items-start">
+            <h3 class="text-xl text-primary-2026 font-bold font-inter">UNDEAD</h3>
+            <h1 class="font-inter">Death Metal - Espanha</h1>
+            <p class="flex gap-2 text-primary-2026 justify-center md:justify-start">
+              <a href="https://www.instagram.com/curseoftheundead/" target="_blank">
+                <img src="https://cdn.simpleicons.org/instagram/white" class="w-6 h-6 hover:invert-[.5]" alt="Instagram">
+              </a>
+              <a href="https://www.facebook.com/curseoftheundead" target="_blank">
+                <img src="https://cdn.simpleicons.org/facebook/white" class="w-6 h-6 hover:invert-[.5]" alt="Facebook">
+              </a>
+              <a href="https://www.youtube.com/watch?v=I3sJNzh42XA" target="_blank">
+                <img src="https://cdn.simpleicons.org/youtube/white" class="w-6 h-6 hover:invert-[.5]" alt="YouTube">
+              </a>
+            </p>
+            <p class="text-white-400 max-w-full md:max-w-4xl text-left md:text-justify">
+              Em estreia absoluta em Portugal, os Undead são um dos maiores nomes do Death Metal espanhol. Death metal visceral e brutal, com uma produção moderna e agressiva, os Undead trazem uma energia única aos seus concertos.
+            </p>
+          </div>
         </div>
 
-        <div class="items-center w-full max-w-4xl space-y-4 md:space-y-0 flex flex-col gap-3 pl-6">
-          <h3 class="text-xl md:text-xl text-primary-2026 font-bold font-inter"> 
-            UNDEAD
-          </h3>
-
-          <h1 class="font-inter">
-            Death Metal - Espanha
-          </h1>
-
-          <p class="flex gap-2 text-primary-2026 max-w-4xl text-center px-4">
-            <a href="https://www.instagram.com/curseoftheundead/" target="_blank" class="text-white hover:text-primary-2026 transition-colors">
-              <img src="https://cdn.simpleicons.org/instagram/white" class="w-6 h-6 hover:invert-[.5] transition-all" alt="Instagram">
-            </a>
-
-            <a href="https://www.facebook.com/curseoftheundead" target="_blank">
-              <img src="https://cdn.simpleicons.org/facebook/white" class="w-6 h-6 hover:invert-[.5] transition-all" alt="Facebook">
-            </a>
-
-            </a>
-            <a href="https://www.youtube.com/watch?v=I3sJNzh42XA" target="_blank" class="underline md:mt-0">
-              <img src="https://cdn.simpleicons.org/youtube/white" class="w-6 h-6 hover:invert-[.5] transition-all" alt="YouTube">
-            </a>
-          </p>
-
-          <p class="text-white-400 max-w-4xl text-justify px-4">
-            Em estreia absoluta em Portugal, os Undead são um dos maiores nomes do Death Metal espanhol. Death metal visceral e brutal, com uma produção moderna e agressiva, os Undead trazem uma energia única aos seus concertos.
-          </p>
+        <!-- WET CACTUS -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-start">
+          <div>
+            <img src="img/b_wetcactus.jpg" alt="WET CACTUS" class="w-full max-w-sm mx-auto rounded-lg">
+          </div>
+          <div class="flex flex-col gap-3 md:pl-6 items-center md:items-start">
+            <h3 class="text-xl text-primary-2026 font-bold font-inter">WET CACTUS</h3>
+            <h1 class="font-inter">Stoner Rock - Espanha</h1>
+            <p class="flex gap-2 text-primary-2026 justify-center md:justify-start">
+              <a href="https://www.instagram.com/wetcactusband/" target="_blank">
+                <img src="https://cdn.simpleicons.org/instagram/white" class="w-6 h-6 hover:invert-[.5]" alt="Instagram">
+              </a>
+              <a href="https://www.facebook.com/wetcactus" target="_blank">
+                <img src="https://cdn.simpleicons.org/facebook/white" class="w-6 h-6 hover:invert-[.5]" alt="Facebook">
+              </a>
+              <a href="https://youtu.be/TalJGsXBLkQ?si=Qkwyni2kW7FGUH-R" target="_blank">
+                <img src="https://cdn.simpleicons.org/youtube/white" class="w-6 h-6 hover:invert-[.5]" alt="YouTube">
+              </a>
+            </p>
+            <p class="text-white-400 max-w-full md:max-w-4xl text-left md:text-justify">
+              Os lendários Wet Cactus são um dos maiores expoentes do Stoner Rock espanhol. Com riffs pesados e grooves cativantes, os Wet Cactus trazem energia massiva ao palco do Bajonca. Influências desde o rock psicadélico anos 70 até ao stoner moderno, concerto intenso e envolvente.
+            </p>
+          </div>
         </div>
+
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2">
-        <div class="pl-6">
-              <img src="img/b_wetcactus.jpg" alt="WET CACTUS" class="rounded-lg">
-        </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-8 px-4">
 
-        <div class="items-center w-full max-w-4xl space-y-4 md:space-y-0 flex flex-col gap-3 pl-6">
-          <h3 class="text-xl md:text-xl text-primary-2026 font-bold font-inter"> 
-            WET CACTUS
-          </h3>
-
-          <h1 class="font-inter">
-            Stoner Rock - Espanha
-          </h1>
-
-          <p class="flex gap-2 text-primary-2026 max-w-4xl text-center px-4">
-            <a href="https://www.instagram.com/wetcactusband/" target="_blank" class="text-white hover:text-primary-2026 transition-colors">
-              <img src="https://cdn.simpleicons.org/instagram/white" class="w-6 h-6 hover:invert-[.5] transition-all" alt="Instagram">
-            </a>
-
-            <a href="https://www.facebook.com/wetcactus" target="_blank">
-              <img src="https://cdn.simpleicons.org/facebook/white" class="w-6 h-6 hover:invert-[.5] transition-all" alt="Facebook">
-            </a>
-
-            </a>
-            <a href="https://youtu.be/TalJGsXBLkQ?si=Qkwyni2kW7FGUH-R" target="_blank" class="underline md:mt-0">
-              <img src="https://cdn.simpleicons.org/youtube/white" class="w-6 h-6 hover:invert-[.5] transition-all" alt="YouTube">
-            </a>
-          </p>
-
-          <p class="text-white-400 max-w-4xl text-justify px-4">
-            Os lendários Wet Cactus são um dos maiores expoentes do Stoner Rock espanhol. Com uma sonoridade que mistura riffs pesados e grooves cativantes, os Wet Cactus 
-          energia massiva ao palco do Bajonca. Com influências que vão desde o rock psicadélico dos anos 70 até ao stoner moderno não é por acaso que os Wet Cactus são uma das bandas mais aclamadas do género em Espanha. O seu concerto promete ser uma viagem sonora intensa e envolvente, perfeita para os amantes de Stoner Rock.
-          </p>
-        </div>
-      </div> 
-    </div>
-
-    <!-- FOSCOR | SPEEDEMON -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-8">
-      <div class="grid grid-cols-1 md:grid-cols-2">
-
-        <div class="items-center w-full max-w-4xl space-y-4 md:space-y-0 flex flex-col gap-3 pl-6">
-          <h3 class="text-xl md:text-xl text-primary-2026 font-bold font-inter"> 
-            FOSCOR
-          </h3>
-
-          <h1 class="font-inter">
-            Post Black Metal - Espanha
-          </h1>
-
-          <p class="flex gap-2 text-primary-2026 max-w-4xl text-center px-4">
-            <a href="https://www.instagram.com/foscor_official/" target="_blank" class="text-white hover:text-primary-2026 transition-colors">
-              <img src="https://cdn.simpleicons.org/instagram/white" class="w-6 h-6 hover:invert-[.5] transition-all" alt="Instagram">
-            </a>
-
-            <a href="https://www.facebook.com/foscor.official" target="_blank">
-              <img src="https://cdn.simpleicons.org/facebook/white" class="w-6 h-6 hover:invert-[.5] transition-all" alt="Facebook">
-            </a>
-
-            </a>
-            <a href="https://www.youtube.com/watch?v=kREyACMVShY" target="_blank" class="underline md:mt-0">
-              <img src="https://cdn.simpleicons.org/youtube/white" class="w-6 h-6 hover:invert-[.5] transition-all" alt="YouTube">
-            </a>
-          </p>
-
-          <p class="text-white-400 max-w-4xl text-justify px-4">
-            De regresso a Portugal a histórica banda de black metal espanhol vem festejar o 25º aniversário desde o primeiro lançamento com um
+        <!-- FOSCOR -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-start">
+          
+          <div class="flex flex-col gap-3 items-center md:items-end md:pr-6">
+            <h3 class="text-xl text-primary-2026 font-bold font-inter">FOSCOR</h3>
+            <h1 class="font-inter">Post Black Metal - Espanha</h1>
+            <p class="flex gap-2 text-primary-2026 justify-center md:justify-start">
+              <a href="https://www.instagram.com/foscor_official/" target="_blank">
+                <img src="https://cdn.simpleicons.org/instagram/white" class="w-6 h-6 hover:invert-[.5]" alt="Instagram">
+              </a>
+              <a href="https://www.facebook.com/foscor.official" target="_blank">
+                <img src="https://cdn.simpleicons.org/facebook/white" class="w-6 h-6 hover:invert-[.5]" alt="Facebook">
+              </a>
+              <a href="https://www.youtube.com/watch?v=kREyACMVShY" target="_blank">
+                <img src="https://cdn.simpleicons.org/youtube/white" class="w-6 h-6 hover:invert-[.5]" alt="YouTube">
+              </a>
+            </p>
+            <p class="text-white-400 max-w-full md:max-w-4xl text-left md:text-justify">
+              De regresso a Portugal a histórica banda de black metal espanhol vem festejar o 25º aniversário desde o primeiro lançamento com um
             set muito especial que promete ser uma viagem intensa pelas raizes do black metal, mas também pelas suas evoluções e experimentações ao longo dos anos. Com uma sonoridade que mistura a agressividade do black metal com atmosferas melancólicas e progressivas, os Foscor são uma banda que promete um concerto cheio de emoção e intensidade.
             Um concerto que promete ser histórico e memorável.
-          </p>
+            </p>
+          </div>
+
+          <div>
+            <img src="img/b_foscor.jpg" alt="FOSCOR" class="w-full max-w-sm mx-auto rounded-lg">
+          </div>
         </div>
 
-        <div class="pl-6" >
-              <img src="img/b_foscor.jpg" alt="FOSCOR" class="rounded-lg">
-        </div>
-      </div>
+        <!-- SPEEDEMON -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-start">
 
-      <div class="grid grid-cols-1 md:grid-cols-2">
-
-        <div class="items-center w-full max-w-4xl space-y-4 md:space-y-0 flex flex-col gap-3 pl-6">
-          <h3 class="text-xl md:text-xl text-primary-2026 font-bold font-inter"> 
-            SPEEDEMON
-          </h3>
-
-          <h1 class="font-inter">
-            Heavy/Speed/Thrash - Portugal
-          </h1>
-
-          <p class="flex gap-2 text-primary-2026 max-w-4xl text-center px-4">
-            <a href="https://www.instagram.com/speedemon.band/" target="_blank" class="text-white hover:text-primary-2026 transition-colors">
-              <img src="https://cdn.simpleicons.org/instagram/white" class="w-6 h-6 hover:invert-[.5] transition-all" alt="Instagram">
-            </a>
-
-            <a href="https://www.facebook.com/speedemon.band" target="_blank">
-              <img src="https://cdn.simpleicons.org/facebook/white" class="w-6 h-6 hover:invert-[.5] transition-all" alt="Facebook">
-            </a>
-
-            </a>
-            <a href="https://www.youtube.com/watch?v=kREyACMVShY" target="_blank" class="underline md:mt-0">
-              <img src="https://cdn.simpleicons.org/youtube/white" class="w-6 h-6 hover:invert-[.5] transition-all" alt="YouTube">
-            </a>
-          </p>
-
-          <p class="text-white-400 max-w-4xl text-justify px-4">
-            Os Speedemon dispensam apresentações em Portugal. A banda que, já representou o país no Wacken, traz na bagagem o aclamado Fall Of Man.
+          <div class="flex flex-col gap-3 items-center md:items-end md:pr-6">
+            <h3 class="text-xl text-primary-2026 font-bold font-inter">SPEEDEMON</h3>
+            <h1 class="font-inter">Heavy/Speed/Thrash - Portugal</h1>
+            <p class="flex gap-2 text-primary-2026 justify-center md:justify-start">
+              <a href="https://www.instagram.com/speedemon.band/" target="_blank">
+                <img src="https://cdn.simpleicons.org/instagram/white" class="w-6 h-6 hover:invert-[.5]" alt="Instagram">
+              </a>
+              <a href="https://www.facebook.com/speedemon.band" target="_blank">
+                <img src="https://cdn.simpleicons.org/facebook/white" class="w-6 h-6 hover:invert-[.5]" alt="Facebook">
+              </a>
+              <a href="https://www.youtube.com/watch?v=kREyACMVShY" target="_blank">
+                <img src="https://cdn.simpleicons.org/youtube/white" class="w-6 h-6 hover:invert-[.5]" alt="YouTube">
+              </a>
+            </p>
+            <p class="text-white-400 max-w-full md:max-w-4xl text-left md:text-justify">
+              Os Speedemon dispensam apresentações em Portugal. A banda que, já representou o país no Wacken, traz na bagagem o aclamado Fall Of Man.
             Com uma sonoridade que mistura elementos de heavy, speed e thrash metal, os Speedemon são uma banda que promete um concerto cheio de energia e atitude. Com riffs rápidos e potentes, solos de guitarra electrizantes e uma performance energética, os Speedemon vão fazer o público vibrar do início ao fim do concerto.
           </p>
+          </div>
+
+          <div>
+            <img src="img/b_speedemon.jpg" alt="SPEEDEMON" class="w-full max-w-sm mx-auto rounded-lg">
+          </div>
         </div>
 
-        <div class="pl-6" >
-              <img src="img/b_speedemon.jpg" alt="SPEEDEMON" class="rounded-lg">
-        </div>
-      </div>
-    </div>
-
-    <!-- BESTA | LÓSTREGOS -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-8">
-      <div class="grid grid-cols-1 md:grid-cols-2">
-        
-        <div class="pl-6">
-              <img src="img/b_besta.jpg" alt="BESTA" class="rounded-lg">
-        </div>
-
-        <div class="items-center w-full max-w-4xl space-y-4 md:space-y-0 flex flex-col gap-3 pl-6">
-          <h3 class="text-xl md:text-xl text-primary-2026 font-bold font-inter"> 
-            BESTA
-          </h3>
-
-          <h1 class="font-inter">
-            Grindcore - Portugal
-          </h1>
-
-          <p class="flex gap-2 text-primary-2026 max-w-4xl text-center px-4">
-            <a href="https://www.instagram.com/bestagrind/" target="_blank" class="text-white hover:text-primary-2026 transition-colors">
-              <img src="https://cdn.simpleicons.org/instagram/white" class="w-6 h-6 hover:invert-[.5] transition-all" alt="Instagram">
-            </a>
-
-            <a href="https://www.facebook.com/bestagrind" target="_blank">
-              <img src="https://cdn.simpleicons.org/facebook/white" class="w-6 h-6 hover:invert-[.5] transition-all" alt="Facebook">
-            </a>
-
-            </a>
-            <a href="https://www.youtube.com/watch?v=kREyACMVShY" target="_blank" class="underline md:mt-0">
-              <img src="https://cdn.simpleicons.org/youtube/white" class="w-6 h-6 hover:invert-[.5] transition-all" alt="YouTube">
-            </a>
-          </p>
-
-          <p class="text-white-400 max-w-4xl text-justify px-4">
-            Reduzir os Besta ao rótulo de Grindcore é, na realidade, uma tremenda injustiça ao que a banda produz em palco.
-            Com uma sonoridade que mistura elementos de grindcore, death metal e hardcore, a banda é uma BESTA em palco com riffs rápidos e potentes, vocais agressivos e uma performance energética, os Besta vão fazer o público vibrar do início ao fim do concerto.
-          </p>
-        </div>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2">
-        <div class="pl-6">
-              <img src="img/b_lostregos.jpg" alt="LOSTREGOS" class="rounded-lg">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-8 px-4">
+
+        <!-- BESTA -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-start">
+          <div>
+            <img src="img/b_besta.jpg" alt="BESTA" class="w-full max-w-sm mx-auto rounded-lg">
+          </div>
+          <div class="flex flex-col gap-3 md:pl-6 items-center md:items-start">
+            <h3 class="text-xl text-primary-2026 font-bold font-inter">BESTA</h3>
+            <h1 class="font-inter">Grindcore - Portugal</h1>
+            <p class="flex gap-2 text-primary-2026 justify-center md:justify-start">
+              <a href="https://www.instagram.com/bestagrind/" target="_blank">
+                <img src="https://cdn.simpleicons.org/instagram/white" class="w-6 h-6 hover:invert-[.5]" alt="Instagram">
+              </a>
+              <a href="https://www.facebook.com/bestagrind" target="_blank">
+                <img src="https://cdn.simpleicons.org/facebook/white" class="w-6 h-6 hover:invert-[.5]" alt="Facebook">
+              </a>
+              <a href="https://www.youtube.com/watch?v=kREyACMVShY" target="_blank">
+                <img src="https://cdn.simpleicons.org/youtube/white" class="w-6 h-6 hover:invert-[.5]" alt="YouTube">
+              </a>
+            </p>
+            <p class="text-white-400 max-w-full md:max-w-4xl text-left md:text-justify">
+              Reduzir os Besta ao rótulo de Grindcore é, na realidade, uma tremenda injustiça ao que a banda produz em palco.
+              Com uma sonoridade que mistura elementos de grindcore, death metal e hardcore, a banda é uma BESTA em palco com riffs rápidos e potentes, vocais agressivos e uma performance energética, os Besta vão fazer o público vibrar do início ao fim do concerto.
+            </p>
+          </div>
         </div>
 
-        <div class="items-center w-full max-w-4xl space-y-4 md:space-y-0 flex flex-col gap-3 pl-6">
-          <h3 class="text-xl md:text-xl text-primary-2026 font-bold font-inter"> 
-            LÓSTREGOS
-          </h3>
-
-          <h1 class="font-inter">
-            Pagan Black Metal - Espanha
-          </h1>
-
-          <p class="flex gap-2 text-primary-2026 max-w-4xl text-center px-4">
-            <a href="https://www.instagram.com/lostregosofficial/" target="_blank" class="text-white hover:text-primary-2026 transition-colors">
-              <img src="https://cdn.simpleicons.org/instagram/white" class="w-6 h-6 hover:invert-[.5] transition-all" alt="Instagram">
-            </a>
-
-            <a href="https://www.facebook.com/LOSTREGOS" target="_blank">
-              <img src="https://cdn.simpleicons.org/facebook/white" class="w-6 h-6 hover:invert-[.5] transition-all" alt="Facebook">
-            </a>
-
-            </a>
-            <a href="https://www.youtube.com/watch?v=hbWcV6e16V8" target="_blank" class="underline md:mt-0">
-              <img src="https://cdn.simpleicons.org/youtube/white" class="w-6 h-6 hover:invert-[.5] transition-all" alt="YouTube">
-            </a>
-          </p>
-
-          <p class="text-white-400 max-w-4xl text-justify px-4">
-            Os galegos Lóstregos são uma pérola do black metal pagão espanhol e internacional, com sonoridades que vão desde o Black Metal seminal ao melódico e até mesmo ao atmosférico,
-            o concerto da banda é uma viagem intensa e envolvente por paisagens sonoras que evocam a natureza, a mitologia e a história da Galiza. 
-            Com uma presença de palco cativante e uma sonoridade única, o concerto da banda será uma experiência inesquecível para os amantes do género e para todos aqueles que apreciam música intensa e emocional.
-          </p>
-        </div>
-      </div> 
-    </div>
-
-    <!-- CRUZEIRO | MURMUR -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-8">
-      <div class="grid grid-cols-1 md:grid-cols-2">
-
-        <div class="items-center w-full max-w-4xl space-y-4 md:space-y-0 flex flex-col gap-3 pl-6">
-          <h3 class="text-xl md:text-xl text-primary-2026 font-bold font-inter"> 
-            CRUZEIRO
-          </h3>
-
-          <h1 class="font-inter">
-            Stoner Doom - Espanha
-          </h1>
-
-          <p class="flex gap-2 text-primary-2026 max-w-4xl text-center px-4">
-            <a href="https://www.instagram.com/cruzeiro.doom.band/" target="_blank" class="text-white hover:text-primary-2026 transition-colors">
-              <img src="https://cdn.simpleicons.org/instagram/white" class="w-6 h-6 hover:invert-[.5] transition-all" alt="Instagram">
-            </a>
-
-            <a href="https://www.facebook.com/Cruzeiro.Doom" target="_blank">
-              <img src="https://cdn.simpleicons.org/facebook/white" class="w-6 h-6 hover:invert-[.5] transition-all" alt="Facebook">
-            </a>
-
-            </a>
-            <a href="https://www.youtube.com/watch?v=5hVxi9FFPHY" target="_blank" class="underline md:mt-0">
-              <img src="https://cdn.simpleicons.org/youtube/white" class="w-6 h-6 hover:invert-[.5] transition-all" alt="YouTube">
-            </a>
-          </p>
-
-          <p class="text-white-400 max-w-4xl text-justify px-4">
-            Os galegos Cruzeiro são uma das maiores revelações do stoner doom espanhol dos últimos anos. 
-            Com uma sonoridade que mistura riffs pesados e atmosferas densas, os Cruzeiro trazem uma energia única ao palco do Bajonca. 
-            Com influências que vão desde o doom clássico até ao stoner moderno, os Cruzeiro são uma banda com um concerto intenso e envolvente.
-          </p>
+        <!-- LÓSTREGOS -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-start">
+          <div>
+            <img src="img/b_lostregos.jpg" alt="LÓSTREGOS" class="w-full max-w-sm mx-auto rounded-lg">
+          </div>
+          <div class="flex flex-col gap-3 md:pl-6 items-center md:items-start">
+            <h3 class="text-xl text-primary-2026 font-bold font-inter">LÓSTREGOS</h3>
+            <h1 class="font-inter">Pagan Black Metal - Espanha</h1>
+            <p class="flex gap-2 text-primary-2026 justify-center md:justify-start">
+              <a href="https://www.instagram.com/lostregosofficial/" target="_blank">
+                <img src="https://cdn.simpleicons.org/instagram/white" class="w-6 h-6 hover:invert-[.5]" alt="Instagram">
+              </a>
+              <a href="https://www.facebook.com/LOSTREGOS" target="_blank">
+                <img src="https://cdn.simpleicons.org/facebook/white" class="w-6 h-6 hover:invert-[.5]" alt="Facebook">
+              </a>
+              <a href="https://www.youtube.com/watch?v=hbWcV6e16V8" target="_blank">
+                <img src="https://cdn.simpleicons.org/youtube/white" class="w-6 h-6 hover:invert-[.5]" alt="YouTube">
+              </a>
+            </p>
+            <p class="text-white-400 max-w-full md:max-w-4xl text-left md:text-justify">
+              Os galegos Lóstregos são uma pérola do black metal pagão espanhol e internacional, com sonoridades que vão desde o Black Metal seminal ao melódico e até mesmo ao atmosférico,
+              o concerto da banda é uma viagem intensa e envolvente por paisagens sonoras que evocam a natureza, a mitologia e a história da Galiza. 
+              Com uma presença de palco cativante e uma sonoridade única, o concerto da banda será uma experiência inesquecível para os amantes do género e para todos aqueles que apreciam música intensa e emocional.
+            </p>
+          </div>
         </div>
 
-        <div class="pl-6" >
-              <img src="img/b_cruzeiro.jpg" alt="CRUZEIRO" class="rounded-lg">
-        </div>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-8 px-4">
 
-        <div class="items-center w-full max-w-4xl space-y-4 md:space-y-0 flex flex-col gap-3 pl-6">
-          <h3 class="text-xl md:text-xl text-primary-2026 font-bold font-inter"> 
-            MURMUR
-          </h3>
+        <!-- CRUZEIRO -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-start">
+          
+          <div class="flex flex-col gap-3 items-center md:items-end md:pr-6">
+            <h3 class="text-xl text-primary-2026 font-bold font-inter">CRUZEIRO</h3>
+            <h1 class="font-inter">Stoner/Doom - Espanha</h1>
+            <p class="flex gap-2 text-primary-2026 justify-center md:justify-start">
+              <a href="https://www.instagram.com/cruzeiro.doom.band/" target="_blank">
+                <img src="https://cdn.simpleicons.org/instagram/white" class="w-6 h-6 hover:invert-[.5]" alt="Instagram">
+              </a>
+              <a href="https://www.facebook.com/Cruzeiro.Doom" target="_blank">
+                <img src="https://cdn.simpleicons.org/facebook/white" class="w-6 h-6 hover:invert-[.5]" alt="Facebook">
+              </a>
+              <a href="https://www.youtube.com/watch?v=5hVxi9FFPHY" target="_blank">
+                <img src="https://cdn.simpleicons.org/youtube/white" class="w-6 h-6 hover:invert-[.5]" alt="YouTube">
+              </a>
+            </p>
+            <p class="text-white-400 max-w-full md:max-w-4xl text-left md:text-justify">
+              Os galegos Cruzeiro são uma das maiores revelações do stoner doom espanhol dos últimos anos. 
+              Com uma sonoridade que mistura riffs pesados e atmosferas densas, os Cruzeiro trazem uma energia única ao palco do Bajonca. 
+              Com influências que vão desde o doom clássico até ao stoner moderno, os Cruzeiro são uma banda com um concerto intenso e envolvente.
+            </p>
+          </div>
 
-          <h1 class="font-inter">
-            Post Black/Doom/Death - Espanha
-          </h1>
-
-          <p class="flex gap-2 text-primary-2026 max-w-4xl text-center px-4">
-            <a href="https://www.instagram.com/murmur.xatafi/" target="_blank" class="text-white hover:text-primary-2026 transition-colors">
-              <img src="https://cdn.simpleicons.org/instagram/white" class="w-6 h-6 hover:invert-[.5] transition-all" alt="Instagram">
-            </a>
-
-            <a href="https://www.facebook.com/MurmurXatafi" target="_blank">
-              <img src="https://cdn.simpleicons.org/facebook/white" class="w-6 h-6 hover:invert-[.5] transition-all" alt="Facebook">
-            </a>
-
-            </a>
-            <a href="https://www.youtube.com/watch?v=TENwSy2ygf0" target="_blank" class="underline md:mt-0">
-              <img src="https://cdn.simpleicons.org/youtube/white" class="w-6 h-6 hover:invert-[.5] transition-all" alt="YouTube">
-            </a>
-          </p>
-
-          <p class="text-white-400 max-w-4xl text-justify px-4">
-            Pela primeira vez em PT!
-            Os Murmur são a nova grande revelação do post black/doom/death espanhol. 
-            De desgustação densa, atmosférica, a mistura de black, doom e death origina uma experiência arrepiante e corrosiva. 
-            A melancolia e a brutalidade coexistem de forma magistral, criando um concerto que promete ser uma viagem intensa e emocional por paisagens sonoras sombrias e envolventes.
-          </p>
-        </div>
-        <div class="pl-6" >
-              <img src="img/b_murmur.jpg" alt="MURMUR" class="rounded-lg">
-        </div>
-      </div>
-    </div>
-
-    <!-- JARDA | RAGEFUL -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-8">
-      <div class="grid grid-cols-1 md:grid-cols-2">
-        
-        <div class="pl-6">
-              <img src="img/b_jarda.jpg" alt="JARDA" class="rounded-lg">
+          <div>
+            <img src="img/b_cruzeiro.jpg" alt="CRUZEIRO" class="w-full max-w-sm mx-auto rounded-lg">
+          </div>
         </div>
 
-        <div class="items-center w-full max-w-4xl space-y-4 md:space-y-0 flex flex-col gap-3 pl-6">
-          <h3 class="text-xl md:text-xl text-primary-2026 font-bold font-inter"> 
-            JARDA
-          </h3>
+        <!-- MURMUR -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-start">
 
-          <h1 class="font-inter">
-            Thrash N' Roll - Portugal
-          </h1>
+          <div class="flex flex-col gap-3 items-center md:items-end md:pr-6">
+            <h3 class="text-xl text-primary-2026 font-bold font-inter">MURMUR</h3>
+            <h1 class="font-inter">Post Black/Doom/Death - Espanha</h1>
+            <p class="flex gap-2 text-primary-2026 justify-center md:justify-start">
+              <a href="https://www.instagram.com/murmur.xatafi/" target="_blank">
+                <img src="https://cdn.simpleicons.org/instagram/white" class="w-6 h-6 hover:invert-[.5]" alt="Instagram">
+              </a>
+              <a href="https://www.facebook.com/MurmurXatafi" target="_blank">
+                <img src="https://cdn.simpleicons.org/facebook/white" class="w-6 h-6 hover:invert-[.5]" alt="Facebook">
+              </a>
+              <a href="https://www.youtube.com/watch?v=TENwSy2ygf0" target="_blank">
+                <img src="https://cdn.simpleicons.org/youtube/white" class="w-6 h-6 hover:invert-[.5]" alt="YouTube">
+              </a>
+            </p>
+            <p class="text-white-400 max-w-full md:max-w-4xl text-left md:text-justify">
+              Pela primeira vez em PT!
+              Os Murmur são a nova grande revelação do post black/doom/death espanhol. 
+              De desgustação densa, atmosférica, a mistura de black, doom e death origina uma experiência arrepiante e corrosiva. 
+              A melancolia e a brutalidade coexistem de forma magistral, criando um concerto que promete ser uma viagem intensa e emocional por paisagens sonoras sombrias e envolventes.
+            </p>
+          </div>
 
-          <p class="flex gap-2 text-primary-2026 max-w-4xl text-center px-4">
-            <a href="https://www.instagram.com/JARDANATION/" target="_blank" class="text-white hover:text-primary-2026 transition-colors">
-              <img src="https://cdn.simpleicons.org/instagram/white" class="w-6 h-6 hover:invert-[.5] transition-all" alt="Instagram">
-            </a>
-
-            <a href="https://www.facebook.com/JARDANATION" target="_blank">
-              <img src="https://cdn.simpleicons.org/facebook/white" class="w-6 h-6 hover:invert-[.5] transition-all" alt="Facebook">
-            </a>
-
-            </a>
-            <a href="https://www.youtube.com/watch?v=c7azaHH1kRw" target="_blank" class="underline md:mt-0">
-              <img src="https://cdn.simpleicons.org/youtube/white" class="w-6 h-6 hover:invert-[.5] transition-all" alt="YouTube">
-            </a>
-          </p>
-
-          <p class="text-white-400 max-w-4xl text-justify px-4">
-           JARDA NATION!!! Thrash n' roll de partir a cabeça, velocidade suprema e riffs que não dão descanso.
-           Brita imensa de energia e atitude, os Jarda prometem adrenalina e diversão do início ao fim do concerto, com uma performance que vai fazer o público vibrar e cantar em uníssono.
-            Cowboyada máxima!
-          </p>
+          <div>
+            <img src="img/b_murmur.jpg" alt="MURMUR" class="w-full max-w-sm mx-auto rounded-lg">
+          </div>
         </div>
+
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2">
-        <div class="pl-6">
-          <img src="img/b_rageful.png" alt="RAGEFUL" class="rounded-lg">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-8 px-4">
+
+        <!-- JARDA -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-start">
+          <div>
+            <img src="img/b_jarda.jpg" alt="JARDA" class="w-full max-w-sm mx-auto rounded-lg">
+          </div>
+          <div class="flex flex-col gap-3 md:pl-6 items-center md:items-start">
+            <h3 class="text-xl text-primary-2026 font-bold font-inter">JARDA</h3>
+            <h1 class="font-inter">Thrash N' Roll - Portugal</h1>
+            <p class="flex gap-2 text-primary-2026 justify-center md:justify-start">
+              <a href="https://www.instagram.com/JARDANATION/" target="_blank">
+                <img src="https://cdn.simpleicons.org/instagram/white" class="w-6 h-6 hover:invert-[.5]" alt="Instagram">
+              </a>
+              <a href="https://www.facebook.com/JARDANATION" target="_blank">
+                <img src="https://cdn.simpleicons.org/facebook/white" class="w-6 h-6 hover:invert-[.5]" alt="Facebook">
+              </a>
+              <a href="https://www.youtube.com/watch?v=c7azaHH1kRw" target="_blank">
+                <img src="https://cdn.simpleicons.org/youtube/white" class="w-6 h-6 hover:invert-[.5]" alt="YouTube">
+              </a>
+            </p>
+            <p class="text-white-400 max-w-full md:max-w-4xl text-left md:text-justify">
+              JARDA NATION!!! Thrash n' roll de partir a cabeça, velocidade suprema e riffs que não dão descanso.
+              Brita imensa de energia e atitude, os Jarda prometem adrenalina e diversão do início ao fim do concerto, com uma performance que vai fazer o público vibrar e cantar em uníssono.
+              Cowboyada máxima!
+            </p>
+          </div>
         </div>
 
-        <div class="items-center w-full max-w-4xl space-y-4 md:space-y-0 flex flex-col gap-3 pl-6">
-          <h3 class="text-xl md:text-xl text-primary-2026 font-bold font-inter"> 
-            RAGEFUL
-          </h3>
-
-          <h1 class="font-inter">
-            Death Metal - Portugal
-          </h1>
-
-          <p class="flex gap-2 text-primary-2026 max-w-4xl text-center px-4">
-            <a href="https://www.instagram.com/ragefulband/" target="_blank" class="text-white hover:text-primary-2026 transition-colors">
-              <img src="https://cdn.simpleicons.org/instagram/white" class="w-6 h-6 hover:invert-[.5] transition-all" alt="Instagram">
-            </a>
-
-            <a href="https://www.facebook.com/ragefulband" target="_blank">
-              <img src="https://cdn.simpleicons.org/facebook/white" class="w-6 h-6 hover:invert-[.5] transition-all" alt="Facebook">
-            </a>
-
-            </a>
-            <a href="https://www.youtube.com/watch?v=PRXrU3pwUmM" target="_blank" class="underline md:mt-0">
-              <img src="https://cdn.simpleicons.org/youtube/white" class="w-6 h-6 hover:invert-[.5] transition-all" alt="YouTube">
-            </a>
-          </p>
-
-          <p class="text-white-400 max-w-4xl text-justify px-4">
-            Quando os Rageful sobem ao palco, o sangue do público ferve! 
-            Numa mistura de Death Metal Old School com Death Metal moderno, os Rageful trazem uma energia brutal e uma técnica impressionante que não vai deixar os fãs de metal indiferentes. 
-            Com riffs pesados, vocais agressivos e uma presença de palco intensa, os Rageful prometem rebentar o palco do Bajonca.
-          </p>
-        </div>
-      </div> 
-    </div>
-
-    <!-- EL SAGUARO | DANGER MACHINE -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-8">
-      <div class="grid grid-cols-1 md:grid-cols-2">
-
-        <div class="items-center w-full max-w-4xl space-y-4 md:space-y-0 flex flex-col gap-3 pl-6">
-          <h3 class="text-xl md:text-xl text-primary-2026 font-bold font-inter"> 
-            EL SAGUARO
-          </h3>
-
-          <h1 class="font-inter">
-            Stoner/Blues Rock - Portugal
-          </h1>
-
-          <p class="flex gap-2 text-primary-2026 max-w-4xl text-center px-4">
-            <a href="https://www.instagram.com/elsaguaroband/" target="_blank" class="text-white hover:text-primary-2026 transition-colors">
-              <img src="https://cdn.simpleicons.org/instagram/white" class="w-6 h-6 hover:invert-[.5] transition-all" alt="Instagram">
-            </a>
-
-            <a href="https://www.facebook.com/elsaguaroband" target="_blank">
-              <img src="https://cdn.simpleicons.org/facebook/white" class="w-6 h-6 hover:invert-[.5] transition-all" alt="Facebook">
-            </a>
-
-            </a>
-            <a href="https://www.youtube.com/watch?v=ej8w3vrGOF4" target="_blank" class="underline md:mt-0">
-              <img src="https://cdn.simpleicons.org/youtube/white" class="w-6 h-6 hover:invert-[.5] transition-all" alt="YouTube">
-            </a>
-          </p>
-
-          <p class="text-white-400 max-w-4xl text-justify px-4">
-           Os rock psicadélico e stoner dos El Saguaro é uma viagem agradável pelas paisagens sonoras do deserto, com riffs pesados e grooves hipnóticos que evocam a vastidão e a mística do sudoeste americano.
-           Este trio português é uma das maiores revelações do stoner/blues rock nacional dos últimos anos.
-          </p>
+        <!-- RAGEFUL -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-start">
+          <div>
+            <img src="img/b_rageful.png" alt="RAGEFUL" class="w-full max-w-sm mx-auto rounded-lg">
+          </div>
+          <div class="flex flex-col gap-3 md:pl-6 items-center md:items-start">
+            <h3 class="text-xl text-primary-2026 font-bold font-inter">RAGEFUL</h3>
+            <h1 class="font-inter">Death Metal - Portugal</h1>
+            <p class="flex gap-2 text-primary-2026 justify-center md:justify-start">
+              <a href="https://www.instagram.com/ragefulband/" target="_blank">
+                <img src="https://cdn.simpleicons.org/instagram/white" class="w-6 h-6 hover:invert-[.5]" alt="Instagram">
+              </a>
+              <a href="https://www.facebook.com/ragefulband" target="_blank">
+                <img src="https://cdn.simpleicons.org/facebook/white" class="w-6 h-6 hover:invert-[.5]" alt="Facebook">
+              </a>
+              <a href="https://www.youtube.com/watch?v=PRXrU3pwUmM" target="_blank">
+                <img src="https://cdn.simpleicons.org/youtube/white" class="w-6 h-6 hover:invert-[.5]" alt="YouTube">
+              </a>
+            </p>
+            <p class="text-white-400 max-w-full md:max-w-4xl text-left md:text-justify">
+              Quando os Rageful sobem ao palco, o sangue do público ferve! 
+              Numa mistura de Death Metal Old School com Death Metal moderno, os Rageful trazem uma energia brutal e uma técnica impressionante que não vai deixar os fãs de metal indiferentes. 
+              Com riffs pesados, vocais agressivos e uma presença de palco intensa, os Rageful prometem rebentar o palco do Bajonca.
+            </p>
+          </div>
         </div>
 
-        <div class="pl-6" >
-              <img src="img/b_elsaguaro.jpg" alt="EL SAGUARO" class="rounded-lg">
-        </div>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-8 px-4">
 
-        <div class="items-center w-full max-w-4xl space-y-4 md:space-y-0 flex flex-col gap-3 pl-6">
-          <h3 class="text-xl md:text-xl text-primary-2026 font-bold font-inter"> 
-            DANGER MACHINE
-          </h3>
+        <!-- EL SAGUARO -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-start">
+          
+          <div class="flex flex-col gap-3 items-center md:items-end md:pr-6">
+            <h3 class="text-xl text-primary-2026 font-bold font-inter">EL SAGUARO</h3>
+            <h1 class="font-inter">Stoner/Blues Rock - Portugal</h1>
+            <p class="flex gap-2 text-primary-2026 justify-center md:justify-start">
+              <a href="https://www.instagram.com/elsaguaroband/" target="_blank">
+                <img src="https://cdn.simpleicons.org/instagram/white" class="w-6 h-6 hover:invert-[.5]" alt="Instagram">
+              </a>
+              <a href="https://www.facebook.com/elsaguaroband" target="_blank">
+                <img src="https://cdn.simpleicons.org/facebook/white" class="w-6 h-6 hover:invert-[.5]" alt="Facebook">
+              </a>
+              <a href="https://www.youtube.com/watch?v=ej8w3vrGOF4" target="_blank">
+                <img src="https://cdn.simpleicons.org/youtube/white" class="w-6 h-6 hover:invert-[.5]" alt="YouTube">
+              </a>
+            </p>
+            <p class="text-white-400 max-w-full md:max-w-4xl text-left md:text-justify">
+              Os rock psicadélico e stoner dos El Saguaro é uma viagem agradável pelas paisagens sonoras do deserto, com riffs pesados e grooves hipnóticos que evocam a vastidão e a mística do sudoeste americano.
+              Este trio português é uma das maiores revelações do stoner/blues rock nacional dos últimos anos.
+            </p>
+          </div>
 
-          <h1 class="font-inter">
-            Heavy/Speed - Portugal
-          </h1>
-
-          <p class="flex gap-2 text-primary-2026 max-w-4xl text-center px-4">
-            <a href="https://www.instagram.com/dangermachinemusic/" target="_blank" class="text-white hover:text-primary-2026 transition-colors">
-              <img src="https://cdn.simpleicons.org/instagram/white" class="w-6 h-6 hover:invert-[.5] transition-all" alt="Instagram">
-            </a>
-
-            <a href="https://www.facebook.com/Dangermachinemusic" target="_blank">
-              <img src="https://cdn.simpleicons.org/facebook/white" class="w-6 h-6 hover:invert-[.5] transition-all" alt="Facebook">
-            </a>
-
-            </a>
-            <a href="https://www.youtube.com/watch?v=MO3H6hS_FA4" target="_blank" class="underline md:mt-0">
-              <img src="https://cdn.simpleicons.org/youtube/white" class="w-6 h-6 hover:invert-[.5] transition-all" alt="YouTube">
-            </a>
-          </p>
-
-          <p class="text-white-400 max-w-4xl text-justify px-4">
-            Danger Machine é rebeldia, é culto ao senhor das trevas e é uma máquina de heavy/speed metal que não para de acelerar.
-            Velocidade e irreverência é o que esta jovem banda alentejana vai levar ao palco do Bajonca.
-          </p>
+          <div>
+            <img src="img/b_elsaguaro.jpg" alt="EL SAGUARO" class="w-full max-w-sm mx-auto rounded-lg">
+          </div>
         </div>
-        <div class="pl-6" >
-              <img src="img/b_dangermachine.jpg" alt="DANGER MACHINE" class="rounded-lg">
+
+        <!-- MURMUR -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-start">
+
+          <div class="flex flex-col gap-3 items-center md:items-end md:pr-6">
+            <h3 class="text-xl text-primary-2026 font-bold font-inter">DANGER MACHINE</h3>
+            <h1 class="font-inter">Heavy/Speed - Portugal</h1>
+            <p class="flex gap-2 text-primary-2026 justify-center md:justify-start">
+              <a href="https://www.instagram.com/dangermachinemusic/" target="_blank">
+                <img src="https://cdn.simpleicons.org/instagram/white" class="w-6 h-6 hover:invert-[.5]" alt="Instagram">
+              </a>
+              <a href="https://www.facebook.com/dangermachinemusic" target="_blank">
+                <img src="https://cdn.simpleicons.org/facebook/white" class="w-6 h-6 hover:invert-[.5]" alt="Facebook">
+              </a>
+              <a href="https://www.youtube.com/watch?v=MO3H6hS_FA4" target="_blank">
+                <img src="https://cdn.simpleicons.org/youtube/white" class="w-6 h-6 hover:invert-[.5]" alt="YouTube">
+              </a>
+            </p>
+            <p class="text-white-400 max-w-full md:max-w-4xl text-left md:text-justify">
+              Danger Machine é rebeldia, é culto ao senhor das trevas e é uma máquina de heavy/speed metal que não para de acelerar.
+              Velocidade e irreverência é o que esta jovem banda alentejana vai levar ao palco do Bajonca.
+            </p>
+          </div>
+
+          <div>
+            <img src="img/b_dangermachine.jpg" alt="DANGER MACHINE" class="w-full max-w-sm mx-auto rounded-lg">
+          </div>
         </div>
-      </div>
-    </div>
 
-    <!-- EL SAGUARO | DANGER MACHINE -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-8">
-      <div class="grid grid-cols-1 md:grid-cols-2">
-
-        <div class="pl-6" >
-              <img src="img/b_spiralsputnik.jpg" alt="SPIRAL SPUTNIK" class="rounded-lg">
-        </div>
-        <div class="items-center w-full max-w-4xl space-y-4 md:space-y-0 flex flex-col gap-3 pl-6">
-          <h3 class="text-xl md:text-xl text-primary-2026 font-bold font-inter"> 
-            SPIRAL SPUTNIK
-          </h3>
-
-          <h1 class="font-inter">
-            Rock - Portugal
-          </h1>
-
-          <p class="flex gap-2 text-primary-2026 max-w-4xl text-center px-4">
-            <a href="https://www.instagram.com/spiralsputnik/" target="_blank" class="text-white hover:text-primary-2026 transition-colors">
-              <img src="https://cdn.simpleicons.org/instagram/white" class="w-6 h-6 hover:invert-[.5] transition-all" alt="Instagram">
-            </a>
-
-            <a href="https://www.facebook.com/profile.php?id=61559263268993" target="_blank">
-              <img src="https://cdn.simpleicons.org/facebook/white" class="w-6 h-6 hover:invert-[.5] transition-all" alt="Facebook">
-            </a>
-
-            </a>
-            <a href="https://www.youtube.com/watch?v=y8RfSV-sJLg&list=PL5tcCs7M9S6XVWxEZt3eZ-z-OdqHnonqa" target="_blank" class="underline md:mt-0">
-              <img src="https://cdn.simpleicons.org/youtube/white" class="w-6 h-6 hover:invert-[.5] transition-all" alt="YouTube">
-            </a>
-          </p>
-
-          <p class="text-white-400 max-w-4xl text-justify px-4">
-           Os Spiral Sputnik jogam em casa!
-           Banda recentemente formada mas já com um aclamado disco lançado, "Noir Déluge" é uma viagem pelo rock mais denso, com nuances grunge e punk rock e até uma pitada de doom,
-           este quarteto viseense está pronto para conquistar palcos grandes! Temos o privilégio e orgulho de os receber.
-          </p>
-        </div>
       </div>
 
-      
-    </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-8 px-4">
+
+        <!-- SPIRAL SPUTNIK -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-start">
+          <div>
+            <img src="img/b_spiralsputnik.jpg" alt="SPIRAL SPUTNIK" class="w-full max-w-sm mx-auto rounded-lg">
+          </div>
+          <div class="flex flex-col gap-3 md:pl-6 items-center md:items-start">
+            <h3 class="text-xl text-primary-2026 font-bold font-inter">SPIRAL SPUTNIK</h3>
+            <h1 class="font-inter">Rock - Portugal</h1>
+            <p class="flex gap-2 text-primary-2026 justify-center md:justify-start">
+              <a href="https://www.instagram.com/spiralsputnik/" target="_blank">
+                <img src="https://cdn.simpleicons.org/instagram/white" class="w-6 h-6 hover:invert-[.5]" alt="Instagram">
+              </a>
+              <a href="https://www.facebook.com/profile.php?id=61559263268993" target="_blank">
+                <img src="https://cdn.simpleicons.org/facebook/white" class="w-6 h-6 hover:invert-[.5]" alt="Facebook">
+              </a>
+              <a href="https://www.youtube.com/watch?v=y8RfSV-sJLg&list=PL5tcCs7M9S6XVWxEZt3eZ-z-OdqHnonqa" target="_blank">
+                <img src="https://cdn.simpleicons.org/youtube/white" class="w-6 h-6 hover:invert-[.5]" alt="YouTube">
+              </a>
+            </p>
+            <p class="text-white-400 max-w-full md:max-w-4xl text-left md:text-justify">
+              Os Spiral Sputnik jogam em casa!
+              Banda recentemente formada mas já com um aclamado disco lançado, "Noir Déluge" é uma viagem pelo rock mais denso, com nuances grunge e punk rock e até uma pitada de doom,
+              este quarteto viseense está pronto para conquistar palcos grandes! Temos o privilégio e orgulho de os receber.
+            </p>
+          </div>
+        </div>
+
+        <!-- RAGEFUL -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-start">
+          
+        </div>
+
+      </div>
 
     </section>
 
     <!-- HORARIOS -->
-    <section id="horarios" class="pb-4 divider-bottom">
-
-      <!-- DIVIDER -->
+    <section id="horarios" class="pb-4 px-4">
       <div class="flex items-center justify-center w-full mb-12">
         <img src="img/fox-divider.png" class="w-1/2" alt="">
       </div>
-      
-      <div class="mb-4">
-        <h1 class="text-4xl md:text-7xl text-primary-2026 mb-4">HORÁRIOS</h1>
-        
-        <p class="text-white-400 italic">Info disponibilizada em breve.</p>
-
-      </div>
-    
+      <h1 class="text-4xl md:text-7xl text-primary-2026 mb-4">HORÁRIOS</h1>
+      <p class="text-white-400 italic">Info disponibilizada em breve.</p>
     </section>
 
-    <section id="artmarket" class="pt-16 mb-12 pb-4 bg-black divider-bottom">
-     
+    <!-- ART MARKET -->
+    <section id="artmarket" class="pt-16 mb-12 pb-4 bg-black px-4">
       <div class="flex items-center justify-center w-full mb-12">
         <img src="img/fox-divider.png" class="w-1/2" alt="">
       </div>
-
-      <div class="mb-4">
-        <h1 class="text-4xl md:text-7xl text-primary-2026 mb-4">ART MARKET</h1>
-        
-        <p class="text-white-400 italic">Info disponibilizada em breve.</p>
-
-      </div>
-      
+      <h1 class="text-4xl md:text-7xl text-primary-2026 mb-4">ART MARKET</h1>
+      <p class="text-white-400 italic">Info disponibilizada em breve.</p>
     </section>
 
-    <section id="local" class="pb-4 divider-bottom">
-     
-       <div class="flex items-center justify-center w-full mb-12">
-        <img src="img/fox-divider.png" class="w-1/2" alt="">
-      </div>
-
-      <div class="mb-4">
-        <h1 class="text-4xl md:text-7xl text-primary-2026 mb-4">COMO CHEGAR</h1>
-
-        <div class="mb-6 underline">
-          <a href="https://maps.app.goo.gl/FK89A324EqaRn15n9" target="_blank"> > Direções de Viseu</a> 
-          <br>
-          <a href="https://maps.app.goo.gl/FK89A324EqaRn15n9" target="_blank"> > Direções de Aveiro</a> 
-        </div>
-        
-        <div class="flex items-center justify-center w-full">
-          <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.231087085412!2d-8.20056007258708!3d40.75694186958854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd2369337ccd57f9%3A0xa1500d391db815ba!2sBajonca%20Rock%20Fest!5e0!3m2!1spt-PT!2spt!4v1770645045778!5m2!1spt-PT!2spt" 
-            width="600" 
-            height="450" 
-            style="border:0;" 
-            allowfullscreen="" 
-            loading="lazy" 
-            referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
-        </div>
-
-      </div>
-      
-    </section>
-
-   <section id="info" class="pt-16 pb-4 bg-black divider-bottom">
-     
+    <!-- COMO CHEGAR -->
+    <section id="local" class="pb-4 px-4">
       <div class="flex items-center justify-center w-full mb-12">
         <img src="img/fox-divider.png" class="w-1/2" alt="">
       </div>
-
-      <div class="mb-4">
-        <h1 class="text-4xl md:text-7xl text-primary-2026 mb-4">INFO</h1>
-        
-        <p class="text-white-400 italic">Info disponibilizada em breve.</p>
-
+      <h1 class="text-4xl md:text-7xl text-primary-2026 mb-4">COMO CHEGAR</h1>
+      <div class="mb-6 underline text-center">
+        <a href="https://maps.app.goo.gl/FK89A324EqaRn15n9" target="_blank"> > Direções de Viseu</a> <br>
+        <a href="https://maps.app.goo.gl/FK89A324EqaRn15n9" target="_blank"> > Direções de Aveiro</a> 
       </div>
-      
+      <div class="w-full max-w-4xl mx-auto aspect-video">
+        <iframe 
+          class="w-full h-full rounded-lg"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.231087085412!2d-8.20056007258708!3d40.75694186958854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd2369337ccd57f9%3A0xa1500d391db815ba!2sBajonca%20Rock%20Fest!5e0!3m2!1spt-PT!2spt!4v1770645045778!5m2!1spt-PT!2spt" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
     </section>
 
-    <section id="parceiros" class="pt-16 pb-4 divider-bottom">
-     
-       <div class="flex items-center justify-center w-full mb-12">
+    <!-- INFO -->
+    <section id="info" class="pt-16 pb-4 bg-black px-4">
+      <div class="flex items-center justify-center w-full mb-12">
         <img src="img/fox-divider.png" class="w-1/2" alt="">
       </div>
-
-      <div class="mb-4">
-        <h1 class="text-4xl md:text-7xl text-primary-2026 mb-4">PARCEIROS</h1>
-        
-        <p class="text-white-400 italic">Info disponibilizada em breve.</p>
-
-      </div>
-      
+      <h1 class="text-4xl md:text-7xl text-primary-2026 mb-4">INFO</h1>
+      <p >
+        <ul>
+          <li><strong>Data:</strong> 10 e 11 de Julho de 2026</li>
+          <li><strong>Local:</strong> Valadares, São Pedro do Sul, Viseu, Portugal</li>
+          <li><strong>Entrada:</strong> Gratuita</li>
+          <li><strong>Campismo:</strong> Gratuito com balneários de duches quentes, disponivel de 9 de Julho a 12 de Julho</li>
+        </ul>
+      </p>
+      <br>
+      <p>
+        <ul>
+          <li>O recinto do festival é arborizado e, consequentemente, dotado de sombra.</li>
+          <li>O espaço é amplo e privilegiado com uma vista única sobre a serra envolvente, proporcionando um ambiente natural e relaxante para os festivaleiros.</li>
+          <li>Há barracas de merch, comida e bebida, e uma zona de chill-out para quem quiser descansar entre concertos.</li>
+          <li>Teremos um art market com artistas a expôr e vender as suas obras.</li>
+          <li>Nas bancas do festival é aceite pagamento por Multibanco, MBWay e dinheiro.</li>
+        </ul>
+      </p>
+      <br>
+      <p>
+        Dúvidas ou mais informações, contacta-nos através do email institucional: <a href="mailto:bajonca.acr@gmail.com" class="text-primary-2026 underline">bajonca.acr@gmail.com</a>
+      </p>
+      <p class="text-white-400 italic">Mais info disponibilizada em breve.</p>
     </section>
 
-    <section id="about" class="pt-16 pb-4 bg-black divider-bottom">
-     
-       <div class="flex items-center justify-center w-full mb-12">
+    <!-- PARCEIROS -->
+    <section id="parceiros" class="pt-16 pb-4 px-4">
+      <div class="flex items-center justify-center w-full mb-12">
         <img src="img/fox-divider.png" class="w-1/2" alt="">
       </div>
+      <h1 class="text-4xl md:text-7xl text-primary-2026 mb-4">PARCEIROS</h1>
+      <p class="text-white-400 italic">Info disponibilizada em breve.</p>
+    </section>
 
-      <div class="mb-4 w-1/2 mx-auto">
-        <h1 class="text-4xl md:text-7xl text-primary-2026 mb-4">SOBRE NÓS</h1>
-        
+    <!-- SOBRE NÓS -->
+    <section id="about" class="pt-16 pb-4 bg-black px-4">
+      <div class="flex items-center justify-center w-full mb-12">
+        <img src="img/fox-divider.png" class="w-1/2" alt="">
+      </div>
+      <div class="w-full md:w-1/2 mx-auto text-left">
+        <h1 class="text-4xl md:text-7xl text-primary-2026 mb-4 text-center">SOBRE NÓS</h1>
         <p class="text-white-400">
-        
           A Bajonca - Associação Cultural e Recreativa é uma entidade sem fins lucrativos, fundada em 2021 por um grupo de amigos apaixonados por música e cultura alternativa. 
           O nosso objetivo é criar um espaço de encontro e celebração da música, arte e cultura, promovendo eventos que valorizem a diversidade e a criatividade. 
           Acreditamos que a música é uma forma poderosa de expressão e conexão, e queremos proporcionar experiências únicas e memoráveis para o nosso público.
           <br>
           Junta-te a nós!
         </p>
-
+        <p>
+          Email institucional: <a href="mailto:bajonca.acr@gmail.com" class="text-primary-2026 underline">
+            bajonca.acr@gmail.com
+            </a>
+        </p>
+        <p>
+          Email booking <a href="mailto:bajonca.booking@gmail.com" class="text-primary-2026 underline">
+            bajonca.booking@gmail.com
+            </a>
+        </p>
       </div>
-      
     </section>
 
   </main>
@@ -764,5 +629,6 @@
   <footer class="text-center text-white-500 text-sm py-6">
     &copy; 2025 Bajonca - Associação Cultural e Recreativa. Todos os direitos reservados.
   </footer>
+
 </body>
 </html>
