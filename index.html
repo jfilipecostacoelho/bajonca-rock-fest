@@ -5,10 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bajonca Rock Fest</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            // Isto cria a classe 'font-inter' e 'font-bebas'
+            'inter': ['Inter', 'sans-serif'],
+            'bebas': ['"Bebas Neue"', 'cursive'],
+            'anton': ['Anton', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" type="text/css" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons/css/flag-icons.min.css">
 </head>
 
 <body class="min-h-screen flex flex-col m-0 p-0 ">
@@ -17,18 +33,21 @@
       <div class="container mx-auto flex justify-between items-center">
   
         <!-- Placeholder à esquerda (vazio para centralizar) -->
-        <div class="w-6 md:w-1/3"></div>
+
   
         <!-- Menu Desktop Centrado -->
-        <ul class="hidden md:flex space-x-6 text-white left-1/2 -translate-x-1/2">
+        <ul class="hidden md:flex mx-auto space-x-6 text-white">
+          
           <li><a href="#" class="hover:text-teal-600">HOME</a></li>
           <li><a href="#cartaz" class="hover:text-teal-600">CARTAZ</a></li>
           <li><a href="#horarios" class="hover:text-teal-600">HORÁRIOS</a></li>
           <li><a href="#cartaz" class="hover:text-teal-600">ART MARKET</a></li>
           <li><a href="#artmarket" class="hover:text-teal-600">COMO CHEGAR</a></li>
-          <li><a href="#" class="hover:text-teal-600">INFO</a></li>
-          <li><a href="#" class="hover:text-teal-600">PARCEIROS</a></li>
-          <li><a href="#" class="hover:text-teal-600">ABOUT US</a></li>
+          <li><a href="#info" class="hover:text-teal-600">INFO</a></li>
+          <li><a href="#parceiros" class="hover:text-teal-600">PARCEIROS</a></li>
+          <li><a href="#about" class="hover:text-teal-600">SOBRE NÓS</a></li>
+          <li><span class="fi fi-es" alt="Version en Español"></span></li>
+          <li><span class="fi fi-gb" alt="English version"></span></li>
         </ul>
   
         <!-- Botão Mobile à direita -->
@@ -72,581 +91,677 @@
   </script>
   
   <!-- HOME -->
-  <div class="flex flex-col items-center h-screen justify-center w-full text-center px-4">
+  <div class="flex flex-col items-center h-screen justify-center w-full text-center px-4 divider-bottom">
 
     <img src="img/logo2024.png" alt="Bajonca Rock Fest Logo"
          class="w-2/3 sm:w-1/2 md:w-1/3 lg:w-1/4 h-auto object-contain mb-4">
   
-    <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-teal-600 mb-2">
-      BAJONCA ROCK FEST
+    <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-primary-2026 mb-2">
+      BAJONCA ROCK FEST IV
     </h1>
+
+     <p>   
+      <span class="fi fi-pt text-xl" ></span>
+    </p>  
   
     <p class="hidden text-xl md:block md:text-xl text-gray-300 m-2">
-      Festival de Rock & Metal | 11 e 12 de Julho 2025 | Valadares, S. Pedro do Sul, Viseu
+      10-11/07/2026 | Valadares, S. Pedro do Sul, Viseu - Portugal
+      <br>
+      Entrada gratuita | Camping gratuito | Art Market | Merch | Natureza
     </p>
 
     <p class="text-base md:hidden text-gray-300">
-      Festival de Rock & Metal <br> 11 e 12 de Julho 2025 <br> Valadares, S. Pedro do Sul, Viseu
+      10-11/07/2026 <br> Valadares, S. Pedro do Sul, Viseu - Portugal
+      <br>
+      Entrada gratuita | Camping gratuito | Art Market | Merch | Natureza 
     </p>
-  
+
   </div>
   
 
-  <main class="flex-1 pl-8 px-8 max-w-4xl mx-auto text-center">
+  <main class="flex-1 mx-auto text-center">
      
     <!-- CARTAZ -->
-    <section id="cartaz" class="pt-16 mb-12">
+    <section id="cartaz" class="pt-16 mb-12 bg-black pb-4 divider-bottom">
+
+      <!-- DIVIDER -->
+      <div class="flex items-center justify-center w-full mb-12">
+        <img src="img/fox-divider.png" class="w-1/2" alt="">
+      </div>
       
       <div class="mb-4">
-        <h1 class="text-4xl md:text-4xl text-teal-600 mb-4">CARTAZ</h1>
+        <h1 class="text-4xl md:text-7xl text-primary-2026 mb-4">CARTAZ</h1>
         
-        <a href="img/cartaz2025.jpg" target="_blank">
-          <img src="img/cartaz2025.jpg" alt="Bajonca Rock Fest" class="mx-auto w-1/2 h-auto mt-4 rounded-lg shadow-lg">
+        <a href="img/cartaz2026.jpg" target="_blank">
+          <img src="img/cartaz2026.jpg" alt="Bajonca Rock Fest" class="mx-auto w-1/2 h-auto mt-4 rounded-lg ">
         </a>
       </div>
 
-      <img src="img/death.png" alt="">
-
-    <!-- KERES -->
-      <div class="flex flex-col items-center justify-center w-full mt-2">
-
-        <h3 class="text-xl md:text-xl text-teal-600 mb-4 font-bold"> KERES (Black/Death - Itália)</h3>
-
-        <div class="flex flex-col md:flex-row items-center justify-center w-full max-w-4xl space-y-4 md:space-y-0 md:space-x-8 mb-4">
-
-            <div class="w-full md:w-1/2 flex justify-center">
-              <img src="https://f4.bcbits.com/img/0033515764_10.jpg" alt="Keres Band" class="band-img rounded-lg shadow-lg">
-            </div>
-
-            <div class="w-full md:w-1/2 flex justify-center">
-                <div class="relative w-full" style="padding-bottom: 56.25%;">
-                    <iframe class="absolute top-0 left-0 w-full h-full rounded-lg"
-                      src="https://www.youtube.com/embed/M_SiOvAE2KU?si=RQ3pt7GAgp0rac3Q"
-                      title="YouTube video player"
-                      frameborder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-                    </iframe>
-                </div>
-            </div>
-
+    <!-- UNDEAD | WET CACTUS -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-8">
+      <div class="grid grid-cols-1 md:grid-cols-2">
+        
+        <div class="pl-6">
+              <img src="img/b_undead.jpg" alt="UNDEAD" class="rounded-lg">
         </div>
 
-        <p class="text-gray-400 max-w-4xl text-center px-4">
-            Os italianos Keres estreiam-se em Portugal depois do aclamado lançamento "Homo Homini Lupus" lançado em 2024. São uma das
-            novas coqueluches do Blackened Death europeu e prometem dar um concerto memorável.
-        </p>
+        <div class="items-center w-full max-w-4xl space-y-4 md:space-y-0 flex flex-col gap-3 pl-6">
+          <h3 class="text-xl md:text-xl text-primary-2026 font-bold font-inter"> 
+            UNDEAD
+          </h3>
 
-      </div>
-    <!-- FIM KERES -->
+          <h1 class="font-inter">
+            Death Metal - Espanha
+          </h1>
 
+          <p class="flex gap-2 text-primary-2026 max-w-4xl text-center px-4">
+            <a href="https://www.instagram.com/curseoftheundead/" target="_blank" class="text-white hover:text-primary-2026 transition-colors">
+              <img src="https://cdn.simpleicons.org/instagram/white" class="w-6 h-6 hover:invert-[.5] transition-all" alt="Instagram">
+            </a>
 
-  <!-- HELEVORN -->
-    <div class="flex flex-col items-center justify-center w-full mt-8">
+            <a href="https://www.facebook.com/curseoftheundead" target="_blank">
+              <img src="https://cdn.simpleicons.org/facebook/white" class="w-6 h-6 hover:invert-[.5] transition-all" alt="Facebook">
+            </a>
 
-      <h3 class="text-xl md:text-xl text-teal-600 mb-4 font-bold">HELEVORN (Gothic/Death/Doom - Espanha)</h3>
+            </a>
+            <a href="https://www.youtube.com/watch?v=I3sJNzh42XA" target="_blank" class="underline md:mt-0">
+              <img src="https://cdn.simpleicons.org/youtube/white" class="w-6 h-6 hover:invert-[.5] transition-all" alt="YouTube">
+            </a>
+          </p>
 
-      <div class="flex flex-col md:flex-row items-center justify-center w-full max-w-4xl space-y-4 md:space-y-0 md:space-x-8 mb-4">
-
-          <div class="w-full md:w-1/2 flex justify-center">
-            <img src="https://www.metal-archives.com/images/6/5/9/1/6591_photo.jpg" alt="Helevorn Band" class="band-img rounded-lg shadow-lg">
-          </div>
-
-          <div class="w-full md:w-1/2 flex justify-center">
-            <div class="relative w-full" style="padding-bottom: 56.25%;">
-              <iframe class="absolute top-0 left-0 w-full h-full rounded-lg"
-                src="https://www.youtube.com/embed/z8vN-c776vg?si=rTJdMiunpdMNzOIs"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-              </iframe>
-            </div>
-          </div>
-
+          <p class="text-white-400 max-w-4xl text-justify px-4">
+            Em estreia absoluta em Portugal, os Undead são um dos maiores nomes do Death Metal espanhol. Death metal visceral e brutal, com uma produção moderna e agressiva, os Undead trazem uma energia única aos seus concertos.
+          </p>
+        </div>
       </div>
 
-      <p class="text-gray-400 max-w-4xl text-center px-4">
-          Depois da última passagem em Portugal (a abrir para Swallow The Sun), os espanhóis Helevorn regressam a Portugal para um concerto muito aguardado.
-          A banda de Maiorca é uma das mais respeitadas do género e promete um concerto cheio de melancolia e peso. Trazem consigo o seu mais recente álbum "Espectres"
-          lançado em 2024, que tem sido muito bem recebido pela crítica e fãs. Um concerto imperdível para os amantes de Gothic/Death/Doom Metal.
-      </p>
+      <div class="grid grid-cols-1 md:grid-cols-2">
+        <div class="pl-6">
+              <img src="img/b_wetcactus.jpg" alt="WET CACTUS" class="rounded-lg">
+        </div>
 
+        <div class="items-center w-full max-w-4xl space-y-4 md:space-y-0 flex flex-col gap-3 pl-6">
+          <h3 class="text-xl md:text-xl text-primary-2026 font-bold font-inter"> 
+            WET CACTUS
+          </h3>
+
+          <h1 class="font-inter">
+            Stoner Rock - Espanha
+          </h1>
+
+          <p class="flex gap-2 text-primary-2026 max-w-4xl text-center px-4">
+            <a href="https://www.instagram.com/wetcactusband/" target="_blank" class="text-white hover:text-primary-2026 transition-colors">
+              <img src="https://cdn.simpleicons.org/instagram/white" class="w-6 h-6 hover:invert-[.5] transition-all" alt="Instagram">
+            </a>
+
+            <a href="https://www.facebook.com/wetcactus" target="_blank">
+              <img src="https://cdn.simpleicons.org/facebook/white" class="w-6 h-6 hover:invert-[.5] transition-all" alt="Facebook">
+            </a>
+
+            </a>
+            <a href="https://youtu.be/TalJGsXBLkQ?si=Qkwyni2kW7FGUH-R" target="_blank" class="underline md:mt-0">
+              <img src="https://cdn.simpleicons.org/youtube/white" class="w-6 h-6 hover:invert-[.5] transition-all" alt="YouTube">
+            </a>
+          </p>
+
+          <p class="text-white-400 max-w-4xl text-justify px-4">
+            Os lendários Wet Cactus são um dos maiores expoentes do Stoner Rock espanhol. Com uma sonoridade que mistura riffs pesados e grooves cativantes, os Wet Cactus 
+          energia massiva ao palco do Bajonca. Com influências que vão desde o rock psicadélico dos anos 70 até ao stoner moderno não é por acaso que os Wet Cactus são uma das bandas mais aclamadas do género em Espanha. O seu concerto promete ser uma viagem sonora intensa e envolvente, perfeita para os amantes de Stoner Rock.
+          </p>
+        </div>
+      </div> 
     </div>
-    <!-- FIM HELEVORN -->
 
-    <!-- ALL AGAINST -->
-    <div class="flex flex-col items-center justify-center w-full mt-8">
+    <!-- FOSCOR | SPEEDEMON -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-8">
+      <div class="grid grid-cols-1 md:grid-cols-2">
 
-      <h3 class="text-xl md:text-xl text-teal-600 mb-4 font-bold">ALL AGAINST (Thrash/Groove - Lisboa)</h3>
+        <div class="items-center w-full max-w-4xl space-y-4 md:space-y-0 flex flex-col gap-3 pl-6">
+          <h3 class="text-xl md:text-xl text-primary-2026 font-bold font-inter"> 
+            FOSCOR
+          </h3>
 
-      <div class="flex flex-col md:flex-row items-center justify-center w-full max-w-4xl space-y-4 md:space-y-0 md:space-x-8 mb-4">
+          <h1 class="font-inter">
+            Post Black Metal - Espanha
+          </h1>
 
-          <div class="w-full md:w-1/2 flex justify-center">
-            <img src="https://www.allagainstband.pt/img/fotobanda.jpg" alt="All Against Band" class="band-img rounded-lg shadow-lg">
-          </div>
+          <p class="flex gap-2 text-primary-2026 max-w-4xl text-center px-4">
+            <a href="https://www.instagram.com/foscor_official/" target="_blank" class="text-white hover:text-primary-2026 transition-colors">
+              <img src="https://cdn.simpleicons.org/instagram/white" class="w-6 h-6 hover:invert-[.5] transition-all" alt="Instagram">
+            </a>
 
-          <div class="w-full md:w-1/2 flex justify-center">
-            <div class="relative w-full" style="padding-bottom: 56.25%;">
-              <iframe class="absolute top-0 left-0 w-full h-full rounded-lg"
-                src="https://www.youtube.com/embed/1T_qkyiS7_Y?si=r_sCNBATCo_ZKPmh"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-              </iframe>
-            </div>
-          </div>
+            <a href="https://www.facebook.com/foscor.official" target="_blank">
+              <img src="https://cdn.simpleicons.org/facebook/white" class="w-6 h-6 hover:invert-[.5] transition-all" alt="Facebook">
+            </a>
 
+            </a>
+            <a href="https://www.youtube.com/watch?v=kREyACMVShY" target="_blank" class="underline md:mt-0">
+              <img src="https://cdn.simpleicons.org/youtube/white" class="w-6 h-6 hover:invert-[.5] transition-all" alt="YouTube">
+            </a>
+          </p>
+
+          <p class="text-white-400 max-w-4xl text-justify px-4">
+            De regresso a Portugal a histórica banda de black metal espanhol vem festejar o 25º aniversário desde o primeiro lançamento com um
+            set muito especial que promete ser uma viagem intensa pelas raizes do black metal, mas também pelas suas evoluções e experimentações ao longo dos anos. Com uma sonoridade que mistura a agressividade do black metal com atmosferas melancólicas e progressivas, os Foscor são uma banda que promete um concerto cheio de emoção e intensidade.
+            Um concerto que promete ser histórico e memorável.
+          </p>
+        </div>
+
+        <div class="pl-6" >
+              <img src="img/b_foscor.jpg" alt="FOSCOR" class="rounded-lg">
+        </div>
       </div>
 
-      <p class="text-gray-400 max-w-4xl text-center px-4">
-        All Against é uma banda de metal feroz de Lisboa, nascida em 2015. 
-        Com riffs pesados e potentes, irromperam na cena em 2017 com a estreia, "Hell In Sintra". 
-        O primeiro EP, "Medusa", gravado e masterizado pelos All Against, apresentou-os ao mundo. Lançam em 2018 o segundo EP "Feed The Machine",
-        e em 2021 o álbum "I Am Alive", rapidamente ganharam experiência a tocar em festivais e concertos, aperfeiçoando o som e a mensagem contra o sistema.
-        "The Day Of Reckoning" vê a luz do dia em 2023 que solidifica a presença dos All Against na cena do metal nacional.
-        Este ano trazem na bagagem a sua mais recente obra prima "Straight Down To Hell".
-        Com uma mistura de Thrash e Groove Metal, All Against é uma banda que promete um concerto cheio de energia e atitude.
-      </p>
+      <div class="grid grid-cols-1 md:grid-cols-2">
 
+        <div class="items-center w-full max-w-4xl space-y-4 md:space-y-0 flex flex-col gap-3 pl-6">
+          <h3 class="text-xl md:text-xl text-primary-2026 font-bold font-inter"> 
+            SPEEDEMON
+          </h3>
+
+          <h1 class="font-inter">
+            Heavy/Speed/Thrash - Portugal
+          </h1>
+
+          <p class="flex gap-2 text-primary-2026 max-w-4xl text-center px-4">
+            <a href="https://www.instagram.com/speedemon.band/" target="_blank" class="text-white hover:text-primary-2026 transition-colors">
+              <img src="https://cdn.simpleicons.org/instagram/white" class="w-6 h-6 hover:invert-[.5] transition-all" alt="Instagram">
+            </a>
+
+            <a href="https://www.facebook.com/speedemon.band" target="_blank">
+              <img src="https://cdn.simpleicons.org/facebook/white" class="w-6 h-6 hover:invert-[.5] transition-all" alt="Facebook">
+            </a>
+
+            </a>
+            <a href="https://www.youtube.com/watch?v=kREyACMVShY" target="_blank" class="underline md:mt-0">
+              <img src="https://cdn.simpleicons.org/youtube/white" class="w-6 h-6 hover:invert-[.5] transition-all" alt="YouTube">
+            </a>
+          </p>
+
+          <p class="text-white-400 max-w-4xl text-justify px-4">
+            Os Speedemon dispensam apresentações em Portugal. A banda que, já representou o país no Wacken, traz na bagagem o aclamado Fall Of Man.
+            Com uma sonoridade que mistura elementos de heavy, speed e thrash metal, os Speedemon são uma banda que promete um concerto cheio de energia e atitude. Com riffs rápidos e potentes, solos de guitarra electrizantes e uma performance energética, os Speedemon vão fazer o público vibrar do início ao fim do concerto.
+          </p>
+        </div>
+
+        <div class="pl-6" >
+              <img src="img/b_speedemon.jpg" alt="SPEEDEMON" class="rounded-lg">
+        </div>
+      </div>
     </div>
-    <!-- FIM ALL AGAINST -->
 
-    <!-- MADMESS -->
-    <div class="flex flex-col items-center justify-center w-full mt-8">
+    <!-- BESTA | LÓSTREGOS -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-8">
+      <div class="grid grid-cols-1 md:grid-cols-2">
+        
+        <div class="pl-6">
+              <img src="img/b_besta.jpg" alt="BESTA" class="rounded-lg">
+        </div>
 
-      <h3 class="text-xl md:text-xl text-teal-600 mb-4 font-bold">MADMESS (Heavy Psych Rock - Porto)</h3>
+        <div class="items-center w-full max-w-4xl space-y-4 md:space-y-0 flex flex-col gap-3 pl-6">
+          <h3 class="text-xl md:text-xl text-primary-2026 font-bold font-inter"> 
+            BESTA
+          </h3>
 
-      <div class="flex flex-col md:flex-row items-center justify-center w-full max-w-4xl space-y-4 md:space-y-0 md:space-x-8 mb-4">
+          <h1 class="font-inter">
+            Grindcore - Portugal
+          </h1>
 
-          <div class="w-full md:w-1/2 flex justify-center">
-            <img src="https://krachambach.de/wp-content/uploads/2024/01/Madmess.jpeg" alt="Madmess Band" class="band-img rounded-lg shadow-lg">
-          </div>
+          <p class="flex gap-2 text-primary-2026 max-w-4xl text-center px-4">
+            <a href="https://www.instagram.com/bestagrind/" target="_blank" class="text-white hover:text-primary-2026 transition-colors">
+              <img src="https://cdn.simpleicons.org/instagram/white" class="w-6 h-6 hover:invert-[.5] transition-all" alt="Instagram">
+            </a>
 
-          <div class="w-full md:w-1/2 flex justify-center">
-            <div class="relative w-full" style="padding-bottom: 56.25%;">
-              <iframe class="absolute top-0 left-0 w-full h-full rounded-lg"
-                src="https://www.youtube.com/embed/2aWEt42TIfw?si=ThfizsIevbopLQHZ"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-              </iframe>
-            </div>
-          </div>
+            <a href="https://www.facebook.com/bestagrind" target="_blank">
+              <img src="https://cdn.simpleicons.org/facebook/white" class="w-6 h-6 hover:invert-[.5] transition-all" alt="Facebook">
+            </a>
 
+            </a>
+            <a href="https://www.youtube.com/watch?v=kREyACMVShY" target="_blank" class="underline md:mt-0">
+              <img src="https://cdn.simpleicons.org/youtube/white" class="w-6 h-6 hover:invert-[.5] transition-all" alt="YouTube">
+            </a>
+          </p>
+
+          <p class="text-white-400 max-w-4xl text-justify px-4">
+            Reduzir os Besta ao rótulo de Grindcore é, na realidade, uma tremenda injustiça ao que a banda produz em palco.
+            Com uma sonoridade que mistura elementos de grindcore, death metal e hardcore, a banda é uma BESTA em palco com riffs rápidos e potentes, vocais agressivos e uma performance energética, os Besta vão fazer o público vibrar do início ao fim do concerto.
+          </p>
+        </div>
       </div>
 
-      <p class="text-gray-400 max-w-4xl text-center px-4">
-        Os Madmess são uma banda de Heavy Psych Rock do Porto, formada em 2019.
-        Com uma sonoridade muito imersiva e viajante, com riffs densos e uma atmosfera que remete aos sons psicadélicos dos anos 70 e que mistura influências de bandas como Black Sabbath, Kyuss e Fu Manchu, os Madmess trazem uma energia única aos seus concertos.
-        Em 2019, lançaram o seu primeiro álbum, homónimo.
-        Já passaram por vários palcos nacionais e internacionais, incluindo o Desertfest Berlin, e são uma das bandas mais promissoras da cena psicadélica portuguesa.
-        Com uma mistura de Heavy Psych Rock e Stoner, Madmess é uma banda que promete um concerto cheio de energia e atitude.
-      </p>
+      <div class="grid grid-cols-1 md:grid-cols-2">
+        <div class="pl-6">
+              <img src="img/b_lostregos.jpg" alt="LOSTREGOS" class="rounded-lg">
+        </div>
 
+        <div class="items-center w-full max-w-4xl space-y-4 md:space-y-0 flex flex-col gap-3 pl-6">
+          <h3 class="text-xl md:text-xl text-primary-2026 font-bold font-inter"> 
+            LÓSTREGOS
+          </h3>
+
+          <h1 class="font-inter">
+            Pagan Black Metal - Espanha
+          </h1>
+
+          <p class="flex gap-2 text-primary-2026 max-w-4xl text-center px-4">
+            <a href="https://www.instagram.com/lostregosofficial/" target="_blank" class="text-white hover:text-primary-2026 transition-colors">
+              <img src="https://cdn.simpleicons.org/instagram/white" class="w-6 h-6 hover:invert-[.5] transition-all" alt="Instagram">
+            </a>
+
+            <a href="https://www.facebook.com/LOSTREGOS" target="_blank">
+              <img src="https://cdn.simpleicons.org/facebook/white" class="w-6 h-6 hover:invert-[.5] transition-all" alt="Facebook">
+            </a>
+
+            </a>
+            <a href="https://www.youtube.com/watch?v=hbWcV6e16V8" target="_blank" class="underline md:mt-0">
+              <img src="https://cdn.simpleicons.org/youtube/white" class="w-6 h-6 hover:invert-[.5] transition-all" alt="YouTube">
+            </a>
+          </p>
+
+          <p class="text-white-400 max-w-4xl text-justify px-4">
+            Os galegos Lóstregos são uma pérola do black metal pagão espanhol e internacional, com sonoridades que vão desde o Black Metal seminal ao melódico e até mesmo ao atmosférico,
+            o concerto da banda é uma viagem intensa e envolvente por paisagens sonoras que evocam a natureza, a mitologia e a história da Galiza. 
+            Com uma presença de palco cativante e uma sonoridade única, o concerto da banda será uma experiência inesquecível para os amantes do género e para todos aqueles que apreciam música intensa e emocional.
+          </p>
+        </div>
+      </div> 
     </div>
-    <!-- FIM MADMESS -->
 
-    <!-- WANDERER -->
-    <div class="flex flex-col items-center justify-center w-full mt-8">
+    <!-- CRUZEIRO | MURMUR -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-8">
+      <div class="grid grid-cols-1 md:grid-cols-2">
 
-      <h3 class="text-xl md:text-xl text-teal-600 mb-4 font-bold">WANDERER (Heavy/Speed - Porto)</h3>
+        <div class="items-center w-full max-w-4xl space-y-4 md:space-y-0 flex flex-col gap-3 pl-6">
+          <h3 class="text-xl md:text-xl text-primary-2026 font-bold font-inter"> 
+            CRUZEIRO
+          </h3>
 
-      <div class="flex flex-col md:flex-row items-center justify-center w-full max-w-4xl space-y-4 md:space-y-0 md:space-x-8 mb-4">
+          <h1 class="font-inter">
+            Stoner Doom - Espanha
+          </h1>
 
-          <div class="w-full md:w-1/2 flex justify-center">
-            <img src="https://scontent.fopo6-2.fna.fbcdn.net/v/t39.30808-6/481243038_1182845143841249_2625055185339950124_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=109&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=GCISiHq4bKoQ7kNvwF_RXxO&_nc_oc=Adm8c79Qe7YtZXw-6eNL5lySav_EmfkTyyDdBWX3K9FKVCD27aPmOf17zfgGtyeAig1dm2GoqgJ_a2Tvim5m9ZzS&_nc_zt=23&_nc_ht=scontent.fopo6-2.fna&_nc_gid=xVqah4gwGIybFav4AhotHA&oh=00_AfO1iGenFM6HuloFT1eDq2PagQRx3wlAe5ixXfszJp38pw&oe=6850C4F9" alt="Wanderer Band" class="band-img rounded-lg shadow-lg">
-          </div>
+          <p class="flex gap-2 text-primary-2026 max-w-4xl text-center px-4">
+            <a href="https://www.instagram.com/cruzeiro.doom.band/" target="_blank" class="text-white hover:text-primary-2026 transition-colors">
+              <img src="https://cdn.simpleicons.org/instagram/white" class="w-6 h-6 hover:invert-[.5] transition-all" alt="Instagram">
+            </a>
 
-          <div class="w-full md:w-1/2 flex justify-center">
-            <div class="relative w-full" style="padding-bottom: 56.25%;">
-              <iframe class="absolute top-0 left-0 w-full h-full rounded-lg"
-                src="https://www.youtube.com/embed/174--KMY-IQ?si=NdXMJv0IaJBo895v"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-              </iframe>
-            </div>
-          </div>
+            <a href="https://www.facebook.com/Cruzeiro.Doom" target="_blank">
+              <img src="https://cdn.simpleicons.org/facebook/white" class="w-6 h-6 hover:invert-[.5] transition-all" alt="Facebook">
+            </a>
 
+            </a>
+            <a href="https://www.youtube.com/watch?v=5hVxi9FFPHY" target="_blank" class="underline md:mt-0">
+              <img src="https://cdn.simpleicons.org/youtube/white" class="w-6 h-6 hover:invert-[.5] transition-all" alt="YouTube">
+            </a>
+          </p>
+
+          <p class="text-white-400 max-w-4xl text-justify px-4">
+            Os galegos Cruzeiro são uma das maiores revelações do stoner doom espanhol dos últimos anos. 
+            Com uma sonoridade que mistura riffs pesados e atmosferas densas, os Cruzeiro trazem uma energia única ao palco do Bajonca. 
+            Com influências que vão desde o doom clássico até ao stoner moderno, os Cruzeiro são uma banda com um concerto intenso e envolvente.
+          </p>
+        </div>
+
+        <div class="pl-6" >
+              <img src="img/b_cruzeiro.jpg" alt="CRUZEIRO" class="rounded-lg">
+        </div>
       </div>
 
-      <p class="text-gray-400 max-w-4xl text-center px-4">
-        Oriundos do Porto, os Wanderer são uma banda de Heavy/Speed Metal formada em 2019.
-        Com uma sonoridade que remete aos clássicos do Heavy Metal dos anos 80, os Wanderer trazem uma energia única aos seus concertos.
-        Em 2020, lançaram o seu primeiro álbum, "Awakening Force", muito bem recebido pela crítica nacional.
-        Prometem um concerto cheio de velocidade, solos de guitarra electrizantes e uma performance energética que vai fazer o público vibrar.
-      </p>
+      <div class="grid grid-cols-1 md:grid-cols-2">
 
+        <div class="items-center w-full max-w-4xl space-y-4 md:space-y-0 flex flex-col gap-3 pl-6">
+          <h3 class="text-xl md:text-xl text-primary-2026 font-bold font-inter"> 
+            MURMUR
+          </h3>
+
+          <h1 class="font-inter">
+            Post Black/Doom/Death - Espanha
+          </h1>
+
+          <p class="flex gap-2 text-primary-2026 max-w-4xl text-center px-4">
+            <a href="https://www.instagram.com/murmur.xatafi/" target="_blank" class="text-white hover:text-primary-2026 transition-colors">
+              <img src="https://cdn.simpleicons.org/instagram/white" class="w-6 h-6 hover:invert-[.5] transition-all" alt="Instagram">
+            </a>
+
+            <a href="https://www.facebook.com/MurmurXatafi" target="_blank">
+              <img src="https://cdn.simpleicons.org/facebook/white" class="w-6 h-6 hover:invert-[.5] transition-all" alt="Facebook">
+            </a>
+
+            </a>
+            <a href="https://www.youtube.com/watch?v=TENwSy2ygf0" target="_blank" class="underline md:mt-0">
+              <img src="https://cdn.simpleicons.org/youtube/white" class="w-6 h-6 hover:invert-[.5] transition-all" alt="YouTube">
+            </a>
+          </p>
+
+          <p class="text-white-400 max-w-4xl text-justify px-4">
+            Pela primeira vez em PT!
+            Os Murmur são a nova grande revelação do post black/doom/death espanhol. 
+            De desgustação densa, atmosférica, a mistura de black, doom e death origina uma experiência arrepiante e corrosiva. 
+            A melancolia e a brutalidade coexistem de forma magistral, criando um concerto que promete ser uma viagem intensa e emocional por paisagens sonoras sombrias e envolventes.
+          </p>
+        </div>
+        <div class="pl-6" >
+              <img src="img/b_murmur.jpg" alt="MURMUR" class="rounded-lg">
+        </div>
+      </div>
     </div>
-    <!-- FIM Wanderer -->
 
-    <!-- NEL BUIO -->
-    <div class="flex flex-col items-center justify-center w-full mt-8">
+    <!-- JARDA | RAGEFUL -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-8">
+      <div class="grid grid-cols-1 md:grid-cols-2">
+        
+        <div class="pl-6">
+              <img src="img/b_jarda.jpg" alt="JARDA" class="rounded-lg">
+        </div>
 
-      <h3 class="text-xl md:text-xl text-teal-600 mb-4 font-bold">Nel Buio (Black Metal/Darkwave - Itália)</h3>
+        <div class="items-center w-full max-w-4xl space-y-4 md:space-y-0 flex flex-col gap-3 pl-6">
+          <h3 class="text-xl md:text-xl text-primary-2026 font-bold font-inter"> 
+            JARDA
+          </h3>
 
-      <div class="flex flex-col md:flex-row items-center justify-center w-full max-w-4xl space-y-4 md:space-y-0 md:space-x-8 mb-4">
+          <h1 class="font-inter">
+            Thrash N' Roll - Portugal
+          </h1>
 
-          <div class="w-full md:w-1/2 flex justify-center">
-            <img src="https://www.metallerium.com/img/nel-buio-nel-buio-2024-06-9994.jpg" alt="Nel Buio Band" class="band-img rounded-lg shadow-lg">
-          </div>
+          <p class="flex gap-2 text-primary-2026 max-w-4xl text-center px-4">
+            <a href="https://www.instagram.com/JARDANATION/" target="_blank" class="text-white hover:text-primary-2026 transition-colors">
+              <img src="https://cdn.simpleicons.org/instagram/white" class="w-6 h-6 hover:invert-[.5] transition-all" alt="Instagram">
+            </a>
 
-          <div class="w-full md:w-1/2 flex justify-center">
-            <div class="relative w-full" style="padding-bottom: 56.25%;">
-              <iframe class="absolute top-0 left-0 w-full h-full rounded-lg"
-                src="https://www.youtube.com/embed/mFARRI-73cE?si=znrgGcsf52rJkFHZ"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-              </iframe>
-            </div>
-          </div>
+            <a href="https://www.facebook.com/JARDANATION" target="_blank">
+              <img src="https://cdn.simpleicons.org/facebook/white" class="w-6 h-6 hover:invert-[.5] transition-all" alt="Facebook">
+            </a>
 
+            </a>
+            <a href="https://www.youtube.com/watch?v=c7azaHH1kRw" target="_blank" class="underline md:mt-0">
+              <img src="https://cdn.simpleicons.org/youtube/white" class="w-6 h-6 hover:invert-[.5] transition-all" alt="YouTube">
+            </a>
+          </p>
+
+          <p class="text-white-400 max-w-4xl text-justify px-4">
+           JARDA NATION!!! Thrash n' roll de partir a cabeça, velocidade suprema e riffs que não dão descanso.
+           Brita imensa de energia e atitude, os Jarda prometem adrenalina e diversão do início ao fim do concerto, com uma performance que vai fazer o público vibrar e cantar em uníssono.
+            Cowboyada máxima!
+          </p>
+        </div>
       </div>
 
-      <p class="text-gray-400 max-w-4xl text-center px-4">
-        Os NEL BUIO (italiano para "na escuridão") nasceram no outono de 2023, impulsionados pela visão criativa de Clod the Ripper 
-        (mundialmente conhecido pelas suas tatuagens e pelo trabalho musical com bandas como Blasphemer e Septycal Gorge). 
-        A missão da banda: fundir a intensidade crua do Black Metal com a nostalgia assombrosa do Darkwave dos anos 80.
-        Sua ascensão meteórica chamou a atenção da prestigiada Avantgarde Music, resultando em um contrato de gravação.
-        O EP de estreia, autointitulado, veio à luz em 21 de junho de 2024, no dia do solstício de Verão.
-        O seu concerto será uma experiência única, onde a fusão de Black Metal e Darkwave promete levar o público a uma viagem sonora intensa e atmosférica.
-      </p>
+      <div class="grid grid-cols-1 md:grid-cols-2">
+        <div class="pl-6">
+          <img src="img/b_rageful.png" alt="RAGEFUL" class="rounded-lg">
+        </div>
 
+        <div class="items-center w-full max-w-4xl space-y-4 md:space-y-0 flex flex-col gap-3 pl-6">
+          <h3 class="text-xl md:text-xl text-primary-2026 font-bold font-inter"> 
+            RAGEFUL
+          </h3>
+
+          <h1 class="font-inter">
+            Death Metal - Portugal
+          </h1>
+
+          <p class="flex gap-2 text-primary-2026 max-w-4xl text-center px-4">
+            <a href="https://www.instagram.com/ragefulband/" target="_blank" class="text-white hover:text-primary-2026 transition-colors">
+              <img src="https://cdn.simpleicons.org/instagram/white" class="w-6 h-6 hover:invert-[.5] transition-all" alt="Instagram">
+            </a>
+
+            <a href="https://www.facebook.com/ragefulband" target="_blank">
+              <img src="https://cdn.simpleicons.org/facebook/white" class="w-6 h-6 hover:invert-[.5] transition-all" alt="Facebook">
+            </a>
+
+            </a>
+            <a href="https://www.youtube.com/watch?v=PRXrU3pwUmM" target="_blank" class="underline md:mt-0">
+              <img src="https://cdn.simpleicons.org/youtube/white" class="w-6 h-6 hover:invert-[.5] transition-all" alt="YouTube">
+            </a>
+          </p>
+
+          <p class="text-white-400 max-w-4xl text-justify px-4">
+            Quando os Rageful sobem ao palco, o sangue do público ferve! 
+            Numa mistura de Death Metal Old School com Death Metal moderno, os Rageful trazem uma energia brutal e uma técnica impressionante que não vai deixar os fãs de metal indiferentes. 
+            Com riffs pesados, vocais agressivos e uma presença de palco intensa, os Rageful prometem rebentar o palco do Bajonca.
+          </p>
+        </div>
+      </div> 
     </div>
-    <!-- FIM NEL BUIO -->
 
-    <!-- AMATERAZU -->
-    <div class="flex flex-col items-center justify-center w-full mt-8">
+    <!-- EL SAGUARO | DANGER MACHINE -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-8">
+      <div class="grid grid-cols-1 md:grid-cols-2">
 
-      <h3 class="text-xl md:text-xl text-teal-600 mb-4 font-bold">Amaterazu (Post/Prog/Doom - Viseu)</h3>
+        <div class="items-center w-full max-w-4xl space-y-4 md:space-y-0 flex flex-col gap-3 pl-6">
+          <h3 class="text-xl md:text-xl text-primary-2026 font-bold font-inter"> 
+            EL SAGUARO
+          </h3>
 
-      <div class="flex flex-col md:flex-row items-center justify-center w-full max-w-4xl space-y-4 md:space-y-0 md:space-x-8 mb-4">
+          <h1 class="font-inter">
+            Stoner/Blues Rock - Portugal
+          </h1>
 
-          <div class="w-full md:w-1/2 flex justify-center">
-            <img src="https://f4.bcbits.com/img/0008732598_10.jpg" alt="Amaterazu Band" class="band-img rounded-lg shadow-lg">
-          </div>
+          <p class="flex gap-2 text-primary-2026 max-w-4xl text-center px-4">
+            <a href="https://www.instagram.com/elsaguaroband/" target="_blank" class="text-white hover:text-primary-2026 transition-colors">
+              <img src="https://cdn.simpleicons.org/instagram/white" class="w-6 h-6 hover:invert-[.5] transition-all" alt="Instagram">
+            </a>
 
-          <div class="w-full md:w-1/2 flex justify-center">
-            <div class="relative w-full" style="padding-bottom: 56.25%;">
-              <iframe class="absolute top-0 left-0 w-full h-full rounded-lg"
-                src="https://www.youtube.com/embed/tQhlFM2rrxg?si=nmtUxSSi7NpZ4F-7"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-              </iframe>
-            </div>
-          </div>
+            <a href="https://www.facebook.com/elsaguaroband" target="_blank">
+              <img src="https://cdn.simpleicons.org/facebook/white" class="w-6 h-6 hover:invert-[.5] transition-all" alt="Facebook">
+            </a>
 
+            </a>
+            <a href="https://www.youtube.com/watch?v=ej8w3vrGOF4" target="_blank" class="underline md:mt-0">
+              <img src="https://cdn.simpleicons.org/youtube/white" class="w-6 h-6 hover:invert-[.5] transition-all" alt="YouTube">
+            </a>
+          </p>
+
+          <p class="text-white-400 max-w-4xl text-justify px-4">
+           Os rock psicadélico e stoner dos El Saguaro é uma viagem agradável pelas paisagens sonoras do deserto, com riffs pesados e grooves hipnóticos que evocam a vastidão e a mística do sudoeste americano.
+           Este trio português é uma das maiores revelações do stoner/blues rock nacional dos últimos anos.
+          </p>
+        </div>
+
+        <div class="pl-6" >
+              <img src="img/b_elsaguaro.jpg" alt="EL SAGUARO" class="rounded-lg">
+        </div>
       </div>
 
-      <p class="text-gray-400 max-w-4xl text-center px-4">
-        Um gosto eclético traz várias cores e texturas à mistura, desde oceanos de riffs carregados de doom, 
-        a aventuras hipnóticas e psicadélicas alma adentro. Um sentido de narrativa reúne as cores e texturas, 
-        pintando um quadro no qual submerges e emerges transformado.
-        Desde 2015, através de invenção e reinvenção, Amaterazu tem refinado este quadro,
-        espalhando-o em três álbuns, cada um uma janela para uma viagem interminável.
-        A procura de uma expressão autêntica e espontânea está na base do modus operandi
-        de Amaterazu. Uma busca incessante e progressiva, guiada pela intuição e a vontade de criar e descobrir. 
-        Musicalmente, as influências divergem e convergem numa identidade eclética, integrando diversos estilos na sua voz, 
-        desde as auras pesadas de bandas como Boris, Melvins ou Tool, até ao espírito progressivo de King Crimson, 
-        Mahavishnu Orchestra ou Frank Zappa, não esquecendo as viagens meditativas e psicadélicas de Pink Floyd, Grails ou 
-        até o som ancestral do koto japonês. Além destas inspirações musicais, a busca de novos modos de ser e de viver moldam a 
-        perspectiva de Amaterazu, surgindo inevitavelmente na expressão musical as diversas revelações, ensinamentos e filosofias 
-        que fazem parte do âmago de cada músico e do progresso colectivo que vai sendo construído.
-        Integrando já projectos como Rustic, Maize, Amazonas, Basalto e The Black Wizards,
-        o trio viseense é composto por membros vindos de diferentes contextos e experiências musicais, com Ricardo Bernardo na 
-        guitarra e voz, Ricardo Silva no baixo, teclados e voz e João Lugatte na bateria e percussões...
-      </p>
+      <div class="grid grid-cols-1 md:grid-cols-2">
 
+        <div class="items-center w-full max-w-4xl space-y-4 md:space-y-0 flex flex-col gap-3 pl-6">
+          <h3 class="text-xl md:text-xl text-primary-2026 font-bold font-inter"> 
+            DANGER MACHINE
+          </h3>
+
+          <h1 class="font-inter">
+            Heavy/Speed - Portugal
+          </h1>
+
+          <p class="flex gap-2 text-primary-2026 max-w-4xl text-center px-4">
+            <a href="https://www.instagram.com/dangermachinemusic/" target="_blank" class="text-white hover:text-primary-2026 transition-colors">
+              <img src="https://cdn.simpleicons.org/instagram/white" class="w-6 h-6 hover:invert-[.5] transition-all" alt="Instagram">
+            </a>
+
+            <a href="https://www.facebook.com/Dangermachinemusic" target="_blank">
+              <img src="https://cdn.simpleicons.org/facebook/white" class="w-6 h-6 hover:invert-[.5] transition-all" alt="Facebook">
+            </a>
+
+            </a>
+            <a href="https://www.youtube.com/watch?v=MO3H6hS_FA4" target="_blank" class="underline md:mt-0">
+              <img src="https://cdn.simpleicons.org/youtube/white" class="w-6 h-6 hover:invert-[.5] transition-all" alt="YouTube">
+            </a>
+          </p>
+
+          <p class="text-white-400 max-w-4xl text-justify px-4">
+            Danger Machine é rebeldia, é culto ao senhor das trevas e é uma máquina de heavy/speed metal que não para de acelerar.
+            Velocidade e irreverência é o que esta jovem banda alentejana vai levar ao palco do Bajonca.
+          </p>
+        </div>
+        <div class="pl-6" >
+              <img src="img/b_dangermachine.jpg" alt="DANGER MACHINE" class="rounded-lg">
+        </div>
+      </div>
     </div>
-    <!-- FIM AMATERAZU -->
 
-    <!-- TVMVLO -->
-    <div class="flex flex-col items-center justify-center w-full mt-8">
+    <!-- EL SAGUARO | DANGER MACHINE -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-8">
+      <div class="grid grid-cols-1 md:grid-cols-2">
 
-      <h3 class="text-xl md:text-xl text-teal-600 mb-4 font-bold">TVMVLO (Old School Death Metal - Viseu)</h3>
+        <div class="pl-6" >
+              <img src="img/b_spiralsputnik.jpg" alt="SPIRAL SPUTNIK" class="rounded-lg">
+        </div>
+        <div class="items-center w-full max-w-4xl space-y-4 md:space-y-0 flex flex-col gap-3 pl-6">
+          <h3 class="text-xl md:text-xl text-primary-2026 font-bold font-inter"> 
+            SPIRAL SPUTNIK
+          </h3>
 
-      <div class="flex flex-col md:flex-row items-center justify-center w-full max-w-4xl space-y-4 md:space-y-0 md:space-x-8 mb-4">
+          <h1 class="font-inter">
+            Rock - Portugal
+          </h1>
 
-          <div class="w-full md:w-1/2 flex justify-center">
-            <img src="https://scontent.fopo6-1.fna.fbcdn.net/v/t39.30808-6/492533756_1220749166717344_6480577105761989117_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_ohc=P4aG6bmkG1cQ7kNvwHgAfgR&_nc_oc=AdkGbV-baL59G4TCUVvTosl1Z9CkwVKLYyJnG6IIXE4KzKDWPPPDhEP9B7IuXEvlA-F8-aFz2yQiPdqLiNqsc1Ef&_nc_zt=23&_nc_ht=scontent.fopo6-1.fna&_nc_gid=9zFy8nv6JPD-5ogZjxyOyw&oh=00_AfMqru1cOKpHrXwbbl66T6V9YDjvQKma3K8ABYbTNtaPmg&oe=6850BB6B" alt="Tvmvlo Band" class="band-img rounded-lg shadow-lg">
-          </div>
+          <p class="flex gap-2 text-primary-2026 max-w-4xl text-center px-4">
+            <a href="https://www.instagram.com/spiralsputnik/" target="_blank" class="text-white hover:text-primary-2026 transition-colors">
+              <img src="https://cdn.simpleicons.org/instagram/white" class="w-6 h-6 hover:invert-[.5] transition-all" alt="Instagram">
+            </a>
 
-          <div class="w-full md:w-1/2 flex justify-center">
-            <div class="relative w-full" style="padding-bottom: 56.25%;">
-              <iframe class="absolute top-0 left-0 w-full h-full rounded-lg"
-                src="https://www.youtube.com/embed/7eDiwsJbrOo?si=GfJRRDlFxYMzxoMY"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-              </iframe>
-            </div>
-          </div>
+            <a href="https://www.facebook.com/profile.php?id=61559263268993" target="_blank">
+              <img src="https://cdn.simpleicons.org/facebook/white" class="w-6 h-6 hover:invert-[.5] transition-all" alt="Facebook">
+            </a>
 
+            </a>
+            <a href="https://www.youtube.com/watch?v=y8RfSV-sJLg&list=PL5tcCs7M9S6XVWxEZt3eZ-z-OdqHnonqa" target="_blank" class="underline md:mt-0">
+              <img src="https://cdn.simpleicons.org/youtube/white" class="w-6 h-6 hover:invert-[.5] transition-all" alt="YouTube">
+            </a>
+          </p>
+
+          <p class="text-white-400 max-w-4xl text-justify px-4">
+           Os Spiral Sputnik jogam em casa!
+           Banda recentemente formada mas já com um aclamado disco lançado, "Noir Déluge" é uma viagem pelo rock mais denso, com nuances grunge e punk rock e até uma pitada de doom,
+           este quarteto viseense está pronto para conquistar palcos grandes! Temos o privilégio e orgulho de os receber.
+          </p>
+        </div>
       </div>
 
-      <p class="text-gray-400 max-w-4xl text-center px-4">
-        Os Tvmvlo são um quarteto oriundo de Viseu que iniciou actividades algures em inicios de 2020.
-        Foi o gosto pelo Old School Death Metal que levou três músicos a se juntarem na sala de ensaios com objectivos bem definidos. 
-        António Baptista, também guitarrista dos Basalto e ex Angriff, ficou encarregue da guitarra e da voz, Fábio Loureiro, dos Rotten Rights, 
-        ficou com a bateria a seu cargo e Nuno Mendonça, baixista dos Basalto e Zurrapa ficou com as 5 cordas.
-        Aos primeiros ensaios a banda decidiu seguir com o claro objectivo de gravar o seu primeiro álbum, contando desde logo com a preciosa ajuda de OJ Laranjo, 
-        tendo este escrito todas as letras para o disco.
-        Foi já em Abril de 2021 que o trio decidiu entrar em estúdio para começar a gravar o que viria a ser o seu trabalho de estreia, 
-        intitulado "The Well Of The Lost Children".
-        Toda a gravação e produção do disco ficou entregue a António Baptista nos Doomed Studios e o mesmo tem data de lançamento agendada para 4 de Dezembro de 2021.
-        Com uma digressão extensa de apoio ao primeiro álbum a banda cimentou a sua posição no Underground português tendo algumas incursões em Espanha também.
-        Toda esta estrada fez com que a banda fosse ficando mais entrosada, algo que rapidamente se começou a notar nas primeiras músicas compostas para o segundo álbum.
-        Em Maio de 2024 a banda gravou o segundo álbum “ Portals Of Terror“, com saída prevista para o outono de 2024. Em 11 de Novembro de 2024 “Portals Of Terror” é editado em Cd pela Doomed Records e em Vinil pela Raging Planet Records, Selvajaria Records, Larvae Records e Firecum Records.
-        A entrada na banda de um segundo guitarrista, Gonçalo Coelho, foi para ajudar a melhorar a performance da banda ao vivo de acordo com as gravações e a banda soar ainda mais massiva.
-      </p>
-
+      
     </div>
-    <!-- FIM TVMVLO -->
-
-    <!-- SANTA PLANTA -->
-    <div class="flex flex-col items-center justify-center w-full mt-8">
-
-      <h3 class="text-xl md:text-xl text-teal-600 mb-4 font-bold">SANTA PLANTA (Stoner/Doom - Espanha)</h3>
-
-      <div class="flex flex-col md:flex-row items-center justify-center w-full max-w-4xl space-y-4 md:space-y-0 md:space-x-8 mb-4">
-
-          <div class="w-full md:w-1/2 flex justify-center">
-            <img src="https://www.mondosonoro.com/wp-content/uploads/2024/11/Santa-Planta.jpg" alt="Santa Planta Band" class="band-img rounded-lg shadow-lg">
-          </div>
-
-          <div class="w-full md:w-1/2 flex justify-center">
-            <div class="relative w-full" style="padding-bottom: 56.25%;">
-              <iframe class="absolute top-0 left-0 w-full h-full rounded-lg"
-                src="https://www.youtube.com/embed/WKcPi-tTQpM?si=1u-TVje7PXmIwtka"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-              </iframe>
-            </div>
-          </div>
-
-      </div>
-
-      <p class="text-gray-400 max-w-4xl text-center px-4">
-        Santa Planta é uma banda de Stoner Doom nascida nas profundezas de Madrid, Espanha, trazendo riffs esmagadores desde 2018.
-        Eles são influenciados pela aspereza do doom dos anos 90 e moderno, com um toque apimentado de rock psicadélico dos anos 70 e os 
-        sussurros sombrios da deusa verde e esfumaçada.
-        Com uma sonoridade que mistura Stoner, Doom e Psicadélico, Santa Planta traz uma energia única aos seus concertos.
-        Em 2024, lançaram o seu primeiro álbum, "From the Trails of Desire".
-      </p>
-
-    </div>
-    <!-- FIM SANTA PLANTA -->
-
-    <!-- INVERTED CROSS -->
-    <div class="flex flex-col items-center justify-center w-full mt-8">
-
-      <h3 class="text-xl md:text-xl text-teal-600 mb-4 font-bold">INVERTED CROSS (Black/Speed - Espanha)</h3>
-
-      <div class="flex flex-col md:flex-row items-center justify-center w-full max-w-4xl space-y-4 md:space-y-0 md:space-x-8 mb-4">
-
-          <div class="w-full md:w-1/2 flex justify-center">
-            <img src="https://f4.bcbits.com/img/0037840406_10.jpg" alt="Inverted Cross Band" class="band-img rounded-lg shadow-lg">
-          </div>
-
-          <div class="w-full md:w-1/2 flex justify-center">
-            <div class="relative w-full" style="padding-bottom: 56.25%;">
-              <iframe class="absolute top-0 left-0 w-full h-full rounded-lg"
-                src="https://www.youtube.com/embed/fM_nhtdRlco?si=AsSIHnPWM2rO7WT0"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-              </iframe>
-            </div>
-          </div>
-
-      </div>
-
-      <p class="text-gray-400 max-w-4xl text-center px-4">
-        Os espanhóis Inverted Cross são uma banda de Black/Speed Metal formada em 2019.
-        Com uma sonoridade que mistura a agressividade do Black Metal com a velocidade do Speed Metal, os Inverted Cross trazem uma energia única aos seus concertos.
-        2024 foi o ano em que lançaram o seu primeiro álbum "Eternal Flames Of Hell" pela label portuguese "HellDProd Records".
-      </p>
-
-    </div>
-    <!-- FIM INVERTED CROSS -->
-
-    <!-- YAATANA -->
-    <div class="flex flex-col items-center justify-center w-full mt-8">
-
-      <h3 class="text-xl md:text-xl text-teal-600 mb-4 font-bold">YAATANA (Thrash - Porto)</h3>
-
-      <div class="flex flex-col md:flex-row items-center justify-center w-full max-w-4xl space-y-4 md:space-y-0 md:space-x-8 mb-4">
-
-          <div class="w-full md:w-1/2 flex justify-center">
-            <img src="https://scontent.fopo6-2.fna.fbcdn.net/v/t39.30808-6/469047316_17908487901052717_2943901618907760428_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_ohc=oY13AzxiKdUQ7kNvwEr0qsl&_nc_oc=AdmrPqf-65Bk-yTdTgMB_0YcbAew77xQGaqFyh47UveN089s6-ulfcDOxpE0BmnYuvA35NrKUdR8qNwEOGO9s5h5&_nc_zt=23&_nc_ht=scontent.fopo6-2.fna&_nc_gid=cOPAqo0oXtMbS58gO-GbsA&oh=00_AfPGVpI49Z0nD-MFSnIJKJp4A7Sb1S5hbT_Bkdcb_7ysDg&oe=6850E0F9" alt="Yaatana Band" class="band-img rounded-lg shadow-lg">
-          </div>
-
-          <div class="w-full md:w-1/2 flex justify-center">
-            <div class="relative w-full" style="padding-bottom: 56.25%;">
-              <iframe class="absolute top-0 left-0 w-full h-full rounded-lg"
-                src="https://www.youtube.com/embed/AFm3XlkGW-8?si=4rZ5kofjmpxkUXtK"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-              </iframe>
-            </div>
-          </div>
-
-      </div>
-
-      <p class="text-gray-400 max-w-4xl text-center px-4">
-        Yaatana nasceu em 2023 na grande cidade portuguesa do Porto, fruto da amizade e da ligação incrível entre quatro miúdos metalheads que adoravam Metal. Enquanto bebiam umas cervejas, decidiram tocar juntos e formar uma banda. Em agosto do mesmo ano, fizeram o primeiro ensaio da banda e, em dezembro, tocaram ao vivo pela primeira vez. A partir daí, captaram a atenção de outras bandas locais e do Underground, bem como de promotores, começando a invadir várias salas de espetáculos da cidade (e não só), deixando a sua marca na cena Underground e, assim, fazendo um nome para si próprios.
-        Apenas alguns meses depois, reservaram uma sessão de estúdio para gravar 6 músicas, que viriam a ser o seu primeiro lançamento, o EP de estreia “Anti-Control”. Gravado, misturado e masterizado por Bruno Silva no Estúdio B, Yaatana assina um contrato com a editora Gruesome Records para lançar o seu EP de estreia no dia 23 de agosto, tanto em formato CD como digital. O renomado designer português O Gatuno é o responsável pela incrível arte do CD, e "Arma Nuclear" é o primeiro vídeo oficial a ver a luz do dia. Yaatana está em ascensão e continua a lutar, trabalhar e esforçar-se por um lugar na cena Underground!
-        Eles vão infetar, destruir e não vão fazer prisioneiros!
-      </p>
-
-    </div>
-    <!-- FIM YAATANA -->
-
-    <!-- SPIN THE SKULL -->
-    <div class="flex flex-col items-center justify-center w-full mt-8">
-
-      <h3 class="text-xl md:text-xl text-teal-600 mb-4 font-bold">SPIN THE SKULL (Rock N' Roll/Psych Rock - Leiria)</h3>
-
-      <div class="flex flex-col md:flex-row items-center justify-center w-full max-w-4xl space-y-4 md:space-y-0 md:space-x-8 mb-4">
-
-          <div class="w-full md:w-1/2 flex justify-center">
-            <img src="img/SpinTheSkull.png" alt="Spin The Skull Band" class="band-img rounded-lg shadow-lg">
-          </div>
-
-      </div>
-
-      <p class="text-gray-400 max-w-4xl text-center px-4">
-        Os Spin The Skull foram formados em 2023, por membros de Lord of Confusion e Misleading, com o intuito de criar Heavy Rock à antiga. 
-        Unidos por Hard Rock, Proto-Punk e longas Jam Sessions, este novo trio evoca um som sujo, com riffs rápidos, wah wah overkill e muitas 
-        outras influências certas à mistura. Sempre influenciados pelo Doom e Psych Rock, a banda criou um disco que soa como se tivesse sido enterrado no subsolo, 
-        à espera de ser desenterrado durante décadas.
-        Para fãs de Stooges, Satan's Satyrs e The Death Wheelers.
-      </p>
-
-    </div>
-    <!-- FIM SPIN THE SKULL -->
-
-    <!-- MAU JESUS -->
-    <div class="flex flex-col items-center justify-center w-full mt-8">
-
-      <h3 class="text-xl md:text-xl text-teal-600 mb-4 font-bold">MAU JESUS (Psy/Stoner Rock - Braga)</h3>
-
-      <div class="flex flex-col md:flex-row items-center justify-center w-full max-w-4xl space-y-4 md:space-y-0 md:space-x-8 mb-4">
-
-          <div class="w-full md:w-1/2 flex justify-center">
-            <img src="https://scontent.fopo6-1.fna.fbcdn.net/v/t39.30808-6/492502605_1497403731671797_6749840613976846673_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=YDlyaY53XDQQ7kNvwHOr4nN&_nc_oc=AdkpSBbdTPNycSWD6V3orVQtaSbUtmSVCS1YKkBob4fwruuYNY1qGBNxG9R1uOhaJiFrgPU5nDZLPylG4j4xTq7Q&_nc_zt=23&_nc_ht=scontent.fopo6-1.fna&_nc_gid=xP-wIYTD-wKbIS9ah5SPNA&oh=00_AfNh7_UZG5oxIvwvm0RSuulIm09vEyp2F47g7rlqLitr4w&oe=6850C4D5" alt="Mau Jesus Band" class="band-img rounded-lg shadow-lg">
-          </div>
-
-          <div class="w-full md:w-1/2 flex justify-center">
-            <div class="relative w-full" style="padding-bottom: 56.25%;">
-              <iframe class="absolute top-0 left-0 w-full h-full rounded-lg"
-                src="https://www.youtube.com/embed/4P_tNy_0ayc?si=-YcncAc7fyoJ2KEh"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-              </iframe>
-            </div>
-          </div>
-
-      </div>
-
-      <p class="text-gray-400 max-w-4xl text-center px-4">
-       Os Mau Jesus apresentam-se com jams longas e envolventes onde o transe e o rock se unem e se misturam com o cheiro das serras lusas.
-      Um trio de stoner rock psicadélico instrumental, com temas provenientes do santuário mais recôndito, onde a inspiração das lendas de demónios, 
-      bruxas e trasgos, do Minho a Trás-os-Montes, ganham forma e se transformam no psicadélico.
-      </p>
-
-      <img src="img/bottom.png" alt="">
-
-    </div>
-    <!-- FIM MAU JESUS -->
 
     </section>
 
-    <section id="horarios" class="pt-16 mb-12">
+    <!-- HORARIOS -->
+    <section id="horarios" class="pb-4 divider-bottom">
+
+      <!-- DIVIDER -->
+      <div class="flex items-center justify-center w-full mb-12">
+        <img src="img/fox-divider.png" class="w-1/2" alt="">
+      </div>
       
       <div class="mb-4">
-        <h1 class="text-4xl md:text-4xl text-teal-600 mb-4">HORÁRIOS</h1>
+        <h1 class="text-4xl md:text-7xl text-primary-2026 mb-4">HORÁRIOS</h1>
         
-        <p class="text-gray-400 italic">Em breve serão divulgados os horários completos dos dias 11 e 12 de Julho.</p>
+        <p class="text-white-400 italic">Info disponibilizada em breve.</p>
 
       </div>
     
     </section>
 
-    <section id="artmarket" class="pt-16 mb-12">
+    <section id="artmarket" class="pt-16 mb-12 pb-4 bg-black divider-bottom">
      
+      <div class="flex items-center justify-center w-full mb-12">
+        <img src="img/fox-divider.png" class="w-1/2" alt="">
+      </div>
+
       <div class="mb-4">
-        <h1 class="text-4xl md:text-4xl text-teal-600 mb-4">ART MARKET</h1>
+        <h1 class="text-4xl md:text-7xl text-primary-2026 mb-4">ART MARKET</h1>
         
-        <p class="text-gray-400 italic">Info em breve.</p>
+        <p class="text-white-400 italic">Info disponibilizada em breve.</p>
 
       </div>
       
     </section>
 
-    <section id="local" class="pt-16 mb-12">
+    <section id="local" class="pb-4 divider-bottom">
      
+       <div class="flex items-center justify-center w-full mb-12">
+        <img src="img/fox-divider.png" class="w-1/2" alt="">
+      </div>
+
       <div class="mb-4">
-        <h1 class="text-4xl md:text-4xl text-teal-600 mb-4">LOCALIZAÇÃO</h1>
+        <h1 class="text-4xl md:text-7xl text-primary-2026 mb-4">COMO CHEGAR</h1>
+
+        <div class="mb-6 underline">
+          <a href="https://maps.app.goo.gl/FK89A324EqaRn15n9" target="_blank"> > Direções de Viseu</a> 
+          <br>
+          <a href="https://maps.app.goo.gl/FK89A324EqaRn15n9" target="_blank"> > Direções de Aveiro</a> 
+        </div>
         
-        <p class="text-gray-400 italic">Info em breve.</p>
+        <div class="flex items-center justify-center w-full">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.231087085412!2d-8.20056007258708!3d40.75694186958854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd2369337ccd57f9%3A0xa1500d391db815ba!2sBajonca%20Rock%20Fest!5e0!3m2!1spt-PT!2spt!4v1770645045778!5m2!1spt-PT!2spt" 
+            width="600" 
+            height="450" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
 
       </div>
       
     </section>
 
-    <section id="info" class="pt-16 mb-12">
+   <section id="info" class="pt-16 pb-4 bg-black divider-bottom">
      
+      <div class="flex items-center justify-center w-full mb-12">
+        <img src="img/fox-divider.png" class="w-1/2" alt="">
+      </div>
+
       <div class="mb-4">
-        <h1 class="text-4xl md:text-4xl text-teal-600 mb-4">INFO</h1>
+        <h1 class="text-4xl md:text-7xl text-primary-2026 mb-4">INFO</h1>
         
-        <p class="text-gray-400 italic">Info em breve.</p>
+        <p class="text-white-400 italic">Info disponibilizada em breve.</p>
 
       </div>
       
     </section>
 
-    <section id="parceiros" class="pt-16 mb-12">
+    <section id="parceiros" class="pt-16 pb-4 divider-bottom">
      
+       <div class="flex items-center justify-center w-full mb-12">
+        <img src="img/fox-divider.png" class="w-1/2" alt="">
+      </div>
+
       <div class="mb-4">
-        <h1 class="text-4xl md:text-4xl text-teal-600 mb-4">PARCEIROS</h1>
+        <h1 class="text-4xl md:text-7xl text-primary-2026 mb-4">PARCEIROS</h1>
         
-        <p class="text-gray-400 italic">Info em breve.</p>
+        <p class="text-white-400 italic">Info disponibilizada em breve.</p>
 
       </div>
       
     </section>
 
-    <section id="parceiros" class="pt-16 mb-12">
+    <section id="about" class="pt-16 pb-4 bg-black divider-bottom">
      
-      <div class="mb-4">
-        <h1 class="text-4xl md:text-4xl text-teal-600 mb-4">ABOUT US</h1>
-        
-        <p class="text-gray-400 italic">Info em breve.</p>
-
+       <div class="flex items-center justify-center w-full mb-12">
+        <img src="img/fox-divider.png" class="w-1/2" alt="">
       </div>
 
+      <div class="mb-4 w-1/2 mx-auto">
+        <h1 class="text-4xl md:text-7xl text-primary-2026 mb-4">SOBRE NÓS</h1>
+        
+        <p class="text-white-400">
+        
+          A Bajonca - Associação Cultural e Recreativa é uma entidade sem fins lucrativos, fundada em 2020 por um grupo de amigos apaixonados por música e cultura alternativa. 
+          O nosso objetivo é criar um espaço de encontro e celebração da música, arte e cultura, promovendo eventos que valorizem a diversidade e a criatividade. 
+          Acreditamos que a música é uma forma poderosa de expressão e conexão, e queremos proporcionar experiências únicas e memoráveis para o nosso público.
+          <br>
+          Junta-te a nós!
+        </p>
+
+      </div>
+      
     </section>
 
   </main>
 
-  <footer class="text-center text-gray-500 text-sm py-6 border-t border-gray-700">
+  <footer class="text-center text-white-500 text-sm py-6">
     &copy; 2025 Bajonca - Associação Cultural e Recreativa. Todos os direitos reservados.
   </footer>
 </body>
